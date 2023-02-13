@@ -1,0 +1,1 @@
+Ik werk het liefst met figma, maar blijkbaar zou dit te gedetailleerd zijn voor de opdracht. Mijn homepage was al helemaal af, vandaar dat ik deze toch even upload. 
