@@ -1,0 +1,62 @@
+@font-face {
+    font-family: "SpaceGrotesk";
+    src: url("/media/fonts/SpaceGrotesk.ttf");
+}
+
+body {
+    background-color: #071B24;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    font-family: SpaceGrotesk, system-ui;
+    display: block;
+    margin-left: 20px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#hero {
+    height: 848px;
+    background-image: url('/media/images/hero.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    nav a {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
