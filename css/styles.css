@@ -1,7 +1,7 @@
 /* || Typography */
 @font-face {
     font-family: "SG-Regular";
-    src: url("/media/fonts/SpaceGrotesk-Regular.woff") format("regular");
+    src: url("/media/fonts/SpaceGrotesk-Regular.woff");
 }
 
 @font-face {
@@ -82,14 +82,17 @@ body p {
 /* HERO SECTION */
 .hero-section {
 
-    background-image: url("../media/images/hero-background.png");
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: url("/media/images/logo-temporary.png");
     background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
 
     height: 848px;
-    width: 655px;
+    width: 100%; /* 6555 px paragraph */
+
+    margin-top: 70px;
+    border: 3px solid yellow;
+
 }
 
 
@@ -138,16 +141,26 @@ body p {
 }
 
 .about-company {
-    border: red solid medium;
-}
+    border: 3px solid blue;
+    display: flex;
+    width: 100%;
 
-.about-company article {
-    width: 580px;
 }
 
 .about-company figure {
-    border: red solid medium;
-    width: fit-content;
+    border: 3px solid yellow;
+    margin: 0;
+    flex-shrink: 0;
+    padding-right: 100px;
+}
+
+.about-company img {
+    max-width: 100%;
+}
+
+.about-company article {
+    border: 3px solid red;
+    flex: 1 1 auto;
 }
 
 /* FEATURED GAMES SECTION */
