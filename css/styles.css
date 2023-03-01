@@ -1,17 +1,17 @@
 /* || Typography */
 @font-face {
     font-family: "SG-Regular";
-    src: url("/media/fonts/SpaceGrotesk-Regular.woff");
+    src: url("../media/fonts/SpaceGrotesk-Regular.woff");
 }
 
 @font-face {
     font-family: "SG-Medium";
-    src: url("/media/fonts/SpaceGrotesk-Medium.woff");
+    src: url("../media/fonts/SpaceGrotesk-Medium.woff");
 }
 
 @font-face {
     font-family: "SG-Bold";
-    src: url("/media/fonts/SpaceGrotesk-Bold.woff");
+    src: url("../media/fonts/SpaceGrotesk-Bold.woff");
 }
 
 /* || General styles */
@@ -82,19 +82,15 @@ body p {
 /* HERO SECTION */
 .hero-section {
 
-    background-image: url("/media/images/logo-temporary.png");
+    /*background-image: url("../media/images/hero-background.png");*/
     background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-
+    /*background-repeat: repeat;*/
     height: 848px;
-    width: 100%; /* 6555 px paragraph */
-
+    /*width: 100%; !* 6555 px paragraph *!*/
     margin-top: 70px;
-    border: 3px solid yellow;
+    padding-inline: 0;
 
 }
-
 
 .hero-section h3 {
     padding-top: 150px;
@@ -141,14 +137,12 @@ body p {
 }
 
 .about-company {
-    border: 3px solid blue;
     display: flex;
     width: 100%;
 
 }
 
 .about-company figure {
-    border: 3px solid yellow;
     margin: 0;
     flex-shrink: 0;
     padding-right: 100px;
@@ -159,7 +153,6 @@ body p {
 }
 
 .about-company article {
-    border: 3px solid red;
     flex: 1 1 auto;
 }
 
