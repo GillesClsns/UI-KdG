@@ -1,0 +1,1 @@
+"file:/C:/Users/claes/OneDrive/Documents/KdG%20Hogeschool/Vakken/User-Interfaces-1/gilles.claessens/./index.html":1.16-2.16: info warning: This document appears to be written in English but the “html” start tag has “lang="nl"”. Consider using “lang="en"” (or variant) instead.
