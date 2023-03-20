@@ -1,5 +1,7 @@
+/* || General Styles */
 body {
-    background-image: url("/media/hero-background.png") ;
+    background: #071B24 url("../media/visuals/hero-background.png") no-repeat;
+    background-size: contain;
 }
 
 h3 {
@@ -8,9 +10,14 @@ h3 {
 }
 
 /* || Hero Section */
+.hero-section {
+    height: 950px;
+}
+
 .hero-section article {
-    width: 50vw;
-    padding: 20px;
+    width: 40vw;
+    padding-left: 50px;
+
 }
 
 .hero-section button {
@@ -28,7 +35,7 @@ h3 {
     font-size: 28px;
     font-weight: 700;
     background-image: linear-gradient(to right, #F8BC24, #F58800);
-    -webkit-background-clip: text; /* Voor Safari gebruikers, anders werkt dit niet. */
+    -webkit-background-clip: text;
     color: transparent;
 }
 
@@ -45,26 +52,106 @@ h3 {
 
 }
 
+.hero-section #goto-game:hover {
+    background: transparent;
+    border: solid #F58800 medium;
+    border-radius: 10px;
+}
+
 .hero-section #goto-all {
     border: solid #F58800 medium;
     background-color: transparent;
     border-radius: 10px;
 }
 
- /* || About Company */
-.about-company {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+.hero-section #goto-all:hover {
+    background-image: linear-gradient(to right, #F8BC24, #F58800);
 
 }
 
+/* || About Company */
+.about-company {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-content: center;
+    align-content: center;
+    height: 800px;
+}
+
 .about-company article {
-    width: 30vw;
-    padding-left: 300px;
+    max-width: 75%;
 }
 
 /* || About Myself */
 .about-myself {
     display: grid;
-    grid-template-columns: 50vw 50vw;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    align-content: center;
+    justify-items: center;
+    height: 800px;
+    background-color: #08212C;
+}
+
+.about-myself article {
+    max-width: 75%;
+}
+
+/* || Why Us */
+.why-us {
+    display: grid;
+    text-align: center;
+    background: #071B24 url("../media/visuals/why-us-vector.png") no-repeat;
+    background-size: contain;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+            "head head head"
+            "art1 art2 art3";
+}
+
+.why-us-heading {
+    grid-area: head;
+    padding: 2vw 0;
+}
+
+.why-us article {
+    padding: 0 5vw 5vw 5vw;
+}
+
+.why-us article h3 {
+    font-size: 24px;
+}
+
+/* Testimonials */
+.testimonials {
+    background-color: #08212C;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+            "head head head"
+            "icon icon icon"
+            "test1 test2 test3";
+}
+
+.testimonials-header {
+    grid-area: head;
+    padding: 5vw 0;
+}
+
+.testimonials-header img {
+    padding-top: 5vw;
+}
+
+.testimonials article {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5vw 5vw 5vw;
+}
+
+.testimonials q {
+    height: 15vw; /* Gives each testimonial the same height so it is spaced evenly */
+}
+
+.testimonials h3, p {
+    margin: 0;
 }

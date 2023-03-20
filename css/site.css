@@ -3,17 +3,30 @@
 /*|| General Styles */
 * {
     font-family: "Space Grotesk", sans-serif;
-    /*background-color: #071B24;*/
     color: #FFF;
 }
 
-/* || Navigation Bar */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.text-logo {
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+/* || Navigation bar for our header and footer */
 .nav-bar {
     position: sticky;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 20px 50px;
 }
 
 .links {
@@ -28,17 +41,11 @@
     list-style: none;
 }
 
-.nav-bar h2 {
-    font-weight: 500;
-    letter-spacing: 5px;
-    font-size: 24px;
-}
-
 .nav-bar li a {
     font-size: 20px;
     font-weight: 500;
     text-decoration: none;
-    padding-left: 30px;
+    margin-left: 50px;
 }
 
 .nav-bar li a:hover {

@@ -1,0 +1,51 @@
+/* || General Styles */
+body {
+    background-color: #071B24;
+}
+
+.product {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.product figure {
+    width: 50%;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product .product-details {
+    width: 50%;
+}
+
+.product .product-details header {
+    margin: 0;
+}
+
+.product .product-details h2 {
+    font-size: 2em;
+}
+
+.product .product-details section {
+    margin-top: 20px;
+}
+
+.product .product-details dl {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product .product-details dt {
+    font-weight: bold;
+}
+
+.product .product-details dd {
+    margin: 0;
+}

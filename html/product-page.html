@@ -4,14 +4,15 @@
 
     <meta charset="UTF-8">
     <title>Our games</title>
-    <link rel="icon" type="image/x-icon" href="/media/images/favicon/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/media/favicon/favicon.png">
+    <link rel="stylesheet" href="/css/product-page.css">
     <link rel="stylesheet" href="/css/site.css">
     <link rel="stylesheet" href="/css/normalize.css">
 
 </head>
 
 <body>
-<h1>Product Archive</h1>
+<h1 class="hidden">Product Archive</h1>
 
 <!-- NAVIGATION BAR -->
 <header>
@@ -20,24 +21,24 @@
         <nav>
             <h3 class="hidden">Navigation</h3>
             <ul class="links">
-                <li><a href="index.html" target="_blank">Home</a></li>
-                <li class="hidden">
-                    <a href="html/product-page.html" target="_blank">Products</a>
-                    <ul>
-                        <li><a href="html/product-page.html#minecraft-section" target="_blank">Minecraft</a></li>
+                <li><a href="/index.html" target="_blank">Home</a></li>
+                <li>
+                    <a href="/html/product-page.html" target="_blank">Products</a>
+                    <ul class="hidden">
+                        <li><a href="/html/product-page.html#minecraft-section" target="_blank">Minecraft</a></li>
                     </ul>
                 </li>
-                <li><a href="html/faq-page.html" target="_blank">FAQ</a></li>
-                <li><a href="html/customizer.html" target="_blank">Customizer</a></li>
-                <li><a href="html/contact.html" target="_blank">Contact Us</a></li>
+                <li><a href="/html/faq-page.html" target="_blank">FAQ</a></li>
+                <li><a href="/html/customizer.html" target="_blank">Customizer</a></li>
+                <li><a href="/html/contact.html" target="_blank">Contact Us</a></li>
             </ul>
         </nav>
     </section>
 </header>
 
 <!-- HERO SECTION -->
-<section id="hero">
-    <h2>Hero section</h2>
+<section class="hero-section">
+    <h2 class="hidden">Hero section</h2>
     <article>
         <h3>Game server hosting</h3>
         <section>
@@ -55,53 +56,44 @@ This section will showcase our recommended/popular games.
 This will be accompanied by an image of the game using an overlay for additional information. Ignore for now.
 -->
 <!-- FEATURED GAMES SECTION -->
-<!--<section class="top-games">-->
-<!--    <h2>OUR TOP GAMES</h2>-->
-<!--    <section id="game-1">-->
-<!--        <h3>Game-1</h3>-->
-<!--        <section class="container">-->
-<!--            <h4>Container</h4>-->
-<!--            <img src="/media/images/favicon.png" class="image" alt="">-->
-<!--            <section class="middle">-->
-<!--                <h5>Middle</h5>-->
-<!--                <section class="text">-->
-<!--                    <h6>Text</h6>-->
-<!--                    <p>Game title</p>-->
-<!--                </section>-->
-<!--            </section>-->
-<!--        </section>-->
-<!--    </section>-->
+<section class="top-games">
+    <h2>OUR TOP GAMES</h2>
+    <section id="game-1">
+        <h3 class="hidden">Game-1</h3>
+        <section class="container">
+            <h4 class="hidden">Container</h4>
+            <img src="/media/thumbnails/minecraft-small.jpg" class="image" alt="">
+            <section class="middle">
+                <h5>Minecraft</h5>
+                <p>Click to explore</p>
+            </section>
+        </section>
+    </section>
 
-<!--    <section id="game-2">-->
-<!--        <h3>Game-2</h3>-->
-<!--        <section class="container">-->
-<!--            <h4>Container</h4>-->
-<!--            <img src="/media/images/favicon.png" class="image" alt="">-->
-<!--            <section class="middle">-->
-<!--                <h5>Middle</h5>-->
-<!--                <section class="text">-->
-<!--                    <h6>Text</h6>-->
-<!--                    <p>Game title</p>-->
-<!--                </section>-->
-<!--            </section>-->
-<!--        </section>-->
-<!--    </section>-->
+    <section id="game-2">
+        <h3 class="hidden">Game-2</h3>
+        <section class="container">
+            <h4 class="hidden">Container</h4>
+            <img src="/media/thumbnails/ark-survival-small.jpeg" class="image" alt="">
+            <section class="middle">
+                <h5>ARK Survival</h5>
+                <p>Click to explore</p>
+            </section>
+        </section>
+    </section>
 
-<!--    <section id="game-3">-->
-<!--        <h3>Game-3</h3>-->
-<!--        <section class="container">-->
-<!--            <h4>Container</h4>-->
-<!--            <img src="/media/images/favicon.png" class="image" alt="">-->
-<!--            <section class="middle">-->
-<!--                <h5>Middle</h5>-->
-<!--                <section class="text">-->
-<!--                    <h6>Text</h6>-->
-<!--                    <p>Game title</p>-->
-<!--                </section>-->
-<!--            </section>-->
-<!--        </section>-->
-<!--    </section>-->
-<!--</section>-->
+    <section id="game-3">
+        <h3 class="hidden">Game-3</h3>
+        <section class="container">
+            <h4 class="hidden">Container</h4>
+            <img src="/media/thumbnails/rust-small.jpeg" class="image" alt="">
+            <section class="middle">
+                <h5>Rust</h5>
+                <p>Click to explore</p>
+            </section>
+        </section>
+    </section>
+</section>
 
 <main>
     <!-- PRODUCT SECTION -->
@@ -118,71 +110,71 @@ This will be accompanied by an image of the game using an overlay for additional
     </form>
 
 
-    <section id="minecraft-section">
+    <section>
         <h2>Minecraft</h2>
         <ul class="product-list" data-category="cat-survival cat-crafting">
             <li>
                 <a href="minecraft-packages/minecraft-wood.html"><img
-                        src="../media/images/thumbnails/minecraft-small.jpg"
+                        src="../media/thumbnails/minecraft-small.jpg"
                         alt="Minecraft Thumbnail"></a>
                 <p>Minecraft [Wood]</p>
                 <p>€5 p.m.</p>
             </li>
             <li>
                 <a href="minecraft-packages/minecraft-stone.html"><img
-                        src="../media/images/thumbnails/minecraft-small.jpg" alt="Minecraft Thumbnail"></a>
+                        src="../media/thumbnails/minecraft-small.jpg" alt="Minecraft Thumbnail"></a>
                 <p>Minecraft [Stone]</p>
                 <p>€8 p.m.</p>
             </li>
             <li>
                 <a href="minecraft-packages/minecraft-iron.html">
-                    <img src="../media/images/thumbnails/minecraft-small.jpg" alt="Minecraft Thumbnail"></a>
+                    <img src="../media/thumbnails/minecraft-small.jpg" alt="Minecraft Thumbnail"></a>
                 <p>Minecraft [Iron]</p>
                 <p>€10 p.m.</p>
             </li>
             <li>
-                <img src="../media/images/thumbnails/minecraft-small.jpg" alt="Minecraft Thumbnail">
+                <img src="../media/thumbnails/minecraft-small.jpg" alt="Minecraft Thumbnail">
                 <p>Minecraft [Gold]</p>
                 <p>€12 p.m.</p>
             </li>
             <li>
-                <img src="../media/images/thumbnails/minecraft-small.jpg" alt="Minecraft Thumbnail">
+                <img src="../media/thumbnails/minecraft-small.jpg" alt="Minecraft Thumbnail">
                 <p>Minecraft [Diamond]</p>
                 <p>€15 p.m.</p>
             </li>
             <li>
-                <img src="../media/images/thumbnails/minecraft-small.jpg" alt="Minecraft Thumbnail">
+                <img src="../media/thumbnails/minecraft-small.jpg" alt="Minecraft Thumbnail">
                 <p>Minecraft [Netherite]</p>
                 <p>€25 p.m.</p>
             </li>
             <li>
-                <img src="../media/images/thumbnails/minecraft-small.jpg" alt="Minecraft Thumbnail">
+                <img src="../media/thumbnails/minecraft-small.jpg" alt="Minecraft Thumbnail">
                 <p>Minecraft [Custom]</p>
                 <p>Price Depends</p>
             </li>
         </ul>
     </section>
 
-    <section>
+    <section class="backcolor-2">
         <h2>Rust</h2>
         <ul class="product-list" data-category="cat-survival cat-crafting">
             <li>
-                <img src="../media/images/thumbnails/rust-small.jpeg" alt="Rust Thumbnail">
+                <img src="../media/thumbnails/rust-small.jpeg" alt="Rust Thumbnail">
                 <p>Rust [Beginner]</p>
                 <p>€5 p.m.</p>
             </li>
             <li>
-                <img src="../media/images/thumbnails/rust-small.jpeg" alt="Rust Thumbnail">
+                <img src="../media/thumbnails/rust-small.jpeg" alt="Rust Thumbnail">
                 <p>Rust [Advanced]</p>
                 <p>€8 p.m.</p>
             </li>
             <li>
-                <img src="../media/images/thumbnails/rust-small.jpeg" alt="Rust Thumbnail">
+                <img src="../media/thumbnails/rust-small.jpeg" alt="Rust Thumbnail">
                 <p>Rust [Professional]</p>
                 <p>€18 p.m.</p>
             </li>
             <li>
-                <img src="../media/images/thumbnails/rust-small.jpeg" alt="Rust Thumbnail">
+                <img src="../media/thumbnails/rust-small.jpeg" alt="Rust Thumbnail">
                 <p>Rust [Custom]</p>
                 <p>Price Depends</p>
             </li>
@@ -190,43 +182,41 @@ This will be accompanied by an image of the game using an overlay for additional
     </section>
 
     <section>
-        <h2>ARK: Survival Evolved</h2>
+        <h2 id="back-color-2">ARK Survival</h2>
         <ul class="product-list" data-category="cat-survival cat-crafting">
             <li>
-                <img src="../media/images/thumbnails/ark-survival-small.jpeg" alt="Ark Survival Thumbnail">
-                <p>ARK: Survival Evolved [Beginner]</p>
+                <img src="../media/thumbnails/ark-survival-small.jpeg" alt="Ark Survival Thumbnail">
+                <p>ARK Survival [Beginner]</p>
                 <p>€5 p.m.</p>
             </li>
             <li>
-                <img src="../media/images/thumbnails/ark-survival-small.jpeg" alt="Ark Survival Thumbnail">
-                <p>ARK: Survival Evolved [Advanced]</p>
+                <img src="../media/thumbnails/ark-survival-small.jpeg" alt="Ark Survival Thumbnail">
+                <p>ARK Survival [Advanced]</p>
                 <p>€8 p.m.</p>
             </li>
             <li>
-                <img src="../media/images/thumbnails/ark-survival-small.jpeg" alt="Ark Survival Thumbnail">
-                <p>ARK: Survival Evolved [Professional]</p>
+                <img src="../media/thumbnails/ark-survival-small.jpeg" alt="Ark Survival Thumbnail">
+                <p>ARK Survival [Professional]</p>
                 <p>€18 p.m.</p>
             </li>
             <li>
-                <img src="../media/images/thumbnails/ark-survival-small.jpeg" alt="Ark Survival Thumbnail">
-                <p>ARK: Survival Evolved [Custom]</p>
+                <img src="../media/thumbnails/ark-survival-small.jpeg" alt="Ark Survival Thumbnail">
+                <p>ARK Survival [Custom]</p>
                 <p>Price Depends</p>
             </li>
         </ul>
     </section>
 
-    <section>
+    <section class="backcolor-2">
         <h2>Valheim</h2>
         <ul class="product-list" data-category="cat-survival cat-crafting">
             <li>
-                <img src="../media/images/thumbnails/valheim-small.png" alt="Valheim Thumbnail">
+                <img src="../media/thumbnails/valheim-small.png" alt="Valheim Thumbnail">
                 <p>Valheim [Beginner]</p>
                 <p>€5 p.m.</p>
             </li>
-        </ul>
-        <ul class="product-list" data-category="cat-survival cat-crafting">
             <li>
-                <img src="../media/images/thumbnails/valheim-small.png" alt="Valheim Thumbnail">
+                <img src="../media/thumbnails/valheim-small.png" alt="Valheim Thumbnail">
                 <p>Valheim [Advanced]</p>
                 <p>€8 p.m.</p>
             </li>
@@ -237,21 +227,17 @@ This will be accompanied by an image of the game using an overlay for additional
         <h2>Farming Simulator</h2>
         <ul class="product-list" data-category="cat-survival cat-crafting">
             <li>
-                <img src="../media/images/thumbnails/farming-simulator-small.jpg" alt="Farming Simulator Thumbnail">
+                <img src="../media/thumbnails/farming-simulator-small.jpg" alt="Farming Simulator Thumbnail">
                 <p>Farming Simulator [Beginner]</p>
                 <p>€5 p.m.</p>
             </li>
-        </ul>
-        <ul class="product-list" data-category="cat-survival cat-crafting">
             <li>
-                <img src="../media/images/thumbnails/farming-simulator-small.jpg" alt="Farming Simulator Thumbnail">
+                <img src="../media/thumbnails/farming-simulator-small.jpg" alt="Farming Simulator Thumbnail">
                 <p>Farming Simulator [Professional]</p>
                 <p>€18 p.m.</p>
             </li>
-        </ul>
-        <ul class="product-list" data-category="cat-survival cat-crafting">
             <li>
-                <img src="../media/images/thumbnails/farming-simulator-small.jpg" alt="Farming Simulator Thumbnail">
+                <img src="../media/thumbnails/farming-simulator-small.jpg" alt="Farming Simulator Thumbnail">
                 <p>Farming Simulator [Custom]</p>
                 <p>Price Depends</p>
             </li>

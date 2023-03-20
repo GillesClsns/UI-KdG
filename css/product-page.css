@@ -1,0 +1,118 @@
+/* || General Styles */
+body {
+    background-color: #071B24;
+}
+
+.backcolor-2 {
+    background-color: #08212C;
+}
+
+/* || Hero Section */
+.hero-section {
+    height: 450px;
+}
+
+.hero-section article {
+    width: 30vw;
+    padding-left: 40px;
+
+}
+
+.hero-section h3 {
+    padding-top: 150px;
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    background-image: linear-gradient(to right, #F8BC24, #F58800);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero-section h4 {
+    font-size: 52px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* || Filter */
+main section {
+    padding: 20px 0 20px 0;
+}
+select {
+    padding: 5px;
+    border-radius: 10px;
+    color: #071B24;
+}
+
+option {
+    color: #071B24;
+}
+
+
+/* Products Archive */
+h2 {
+    font-size: 32px;
+    padding-left: 40px;
+    font-weight: 700;
+}
+
+.product-list {
+    padding-left: 40px;
+    max-width: 70vw;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0;
+}
+
+.product-list li {
+    max-width: 25%;
+    text-align: center;
+}
+
+/* FEATURED GAMES SECTION */
+.top-games {
+    background-color: #08212C;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10vw;
+}
+
+.container {
+    position: relative;
+}
+
+.image {
+    opacity: 1;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.container:hover .image {
+    opacity: 0.3;
+}
+
+.container:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+}
