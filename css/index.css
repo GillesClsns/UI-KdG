@@ -1,6 +1,6 @@
 /* || General Styles */
 body {
-    background: #071B24 url("../media/visuals/hero-background.png") no-repeat;
+    background: #071B24 url("../media/visuals/hero-background.png") no-repeat; /* Hero section background */
     background-size: contain;
 }
 
@@ -35,7 +35,7 @@ h3 {
     font-size: 28px;
     font-weight: 700;
     background-image: linear-gradient(to right, #F8BC24, #F58800);
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; /* Required for a working gradient + safari support */
     color: transparent;
 }
 
@@ -102,7 +102,7 @@ h3 {
     text-align: center;
     background: #071B24 url("../media/visuals/why-us-vector.png") no-repeat;
     background-size: contain;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr; /* Gives each column a static size, which makes it easier to center contents */
     grid-template-areas:
             "head head head"
             "art1 art2 art3";
@@ -126,7 +126,7 @@ h3 {
     background-color: #08212C;
     display: grid;
     text-align: center;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr; /* Gives each column a static size, which makes it easier to center contents */
     grid-template-areas:
             "head head head"
             "icon icon icon"

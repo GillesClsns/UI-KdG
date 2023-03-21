@@ -20,6 +20,14 @@ body {
     letter-spacing: 5px;
 }
 
+html {
+    scroll-behavior: smooth; /*Adds smooth scrolling instead of snapping to element*/
+}
+
+.backcolor-2 {
+    background-color: #08212C; /* Second backcolor for some variation in background */
+}
+
 /* || Navigation bar for our header and footer */
 .nav-bar {
     position: sticky;
@@ -48,7 +56,8 @@ body {
     margin-left: 50px;
 }
 
-.nav-bar li a:hover {
+.nav-bar li a:hover,
+.nav-bar li a.active {
     text-decoration: underline #F58800;
     text-underline-offset: 10px;
 }

@@ -1,15 +1,17 @@
 /* || General Styles */
 body {
-    background-color: #071B24;
+    background: #071B24 url("../../gilles.claessens/media/visuals/product-page-hero.jpg") no-repeat;
+    background-size: contain;
 }
 
-.backcolor-2 {
-    background-color: #08212C;
+main h2 {
+    margin-left: 50px;
+    padding-top: 20px;
 }
 
 /* || Hero Section */
 .hero-section {
-    height: 450px;
+    height: 850px;
 }
 
 .hero-section article {
@@ -34,10 +36,30 @@ body {
     margin: 0;
 }
 
+.hero-section #hero-button {
+    font-size: 22px;
+    margin-top: 2vh;
+    height: 70px;
+    width: 255px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #F8BC24, #F58800);
+    margin-right: 20px;
+    border: none;
+
+}
+
 /* || Filter */
 main section {
-    padding: 20px 0 20px 0;
+    /*padding: 20px 0 20px 0;*/
 }
+
+form {
+    display: flex;
+    flex-direction: row;
+    align-self: end;
+}
+
 select {
     padding: 5px;
     border-radius: 10px;
@@ -48,22 +70,16 @@ option {
     color: #071B24;
 }
 
-
-/* Products Archive */
-h2 {
-    font-size: 32px;
-    padding-left: 40px;
-    font-weight: 700;
-}
+/* || Product Archive */
 
 .product-list {
-    padding-left: 40px;
+    margin-left: 50px;
     max-width: 70vw;
+    padding: 0;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    margin: 0;
 }
 
 .product-list li {
@@ -72,14 +88,30 @@ h2 {
 }
 
 /* FEATURED GAMES SECTION */
-.top-games {
+.top-games-section {
+    height: 30vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+            "head head head"
+            "game1 game2 game3";
+    justify-content: center;
+    align-content: center;
+    text-align: center;
     background-color: #08212C;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10vw;
 }
 
+.top-games-section h2 {
+    padding: 0 0 30px 0;
+    grid-area: head;
+}
+
+.top-games {
+    display: flex;
+    justify-content: center;
+}
 .container {
+    width: 15vw;
     position: relative;
 }
 

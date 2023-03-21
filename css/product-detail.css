@@ -1,51 +1,78 @@
 /* || General Styles */
 body {
-    background-color: #071B24;
+    background: #071B24;
 }
 
+/* || Broodkruimmeltje */
+.mmhm-broodkruimmeltje, .mmhm-broodkruimmeltje li a {
+    grid-area: breadcrumb;
+    margin-left: 50px;
+    padding-right: 15px;
+    text-decoration: none;
+}
+
+.mmhm-broodkruimmeltje ol {
+    padding: 20px 0;
+    width: fit-content;
+    display: flex;
+    list-style-type: "/";
+    border: 1px #4E4E4E solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.mmhm-broodkruimmeltje li:first-child {
+    list-style: none;
+}
+
+.mmhm-broodkruimmeltje li:last-child a { /* Changes the color of the last element to show the current page */
+    color: #F58800;
+    opacity: 35%;
+}
+
+/* || Product Overview */
 .product {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
+    height: 40vw;
+    justify-content: center;
+    align-content: center;
+    background-color: #08212C;
+    display: grid;
+    grid-template-areas:
+            "breadcrumb nothing"
+            "image head"
+            "image description"
+            "image properties";
 }
 
-.product figure {
-    width: 50%;
+.product-image {
+    grid-area: image;
+    margin-left: 50px;
 }
 
-.product img {
-    max-width: 100%;
-    height: auto;
+.product-header {
+    grid-area: head;
+    align-self: flex-end;
 }
 
-.product .product-details {
-    width: 50%;
-}
-
-.product .product-details header {
-    margin: 0;
-}
-
-.product .product-details h2 {
-    font-size: 2em;
-}
-
-.product .product-details section {
+.product-description {
+    grid-area: description;
     margin-top: 20px;
+    max-width: 50vw;
 }
 
-.product .product-details dl {
+.product-properties {
+    grid-area: properties;
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.product-properties dl {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
 }
 
-.product .product-details dt {
-    font-weight: bold;
+.product-properties dt {
+    margin-right: 0.5vw;
 }
 
-.product .product-details dd {
-    margin: 0;
+.product-properties dd {
+    margin: 0 5vw 0 0;
 }
