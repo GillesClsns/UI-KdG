@@ -1,0 +1,14 @@
+/* || General Styles */
+body {
+    background-color: #071B24;
+}
+
+.faq-section {
+    background-color: #08212C;
+    align-content: center;
+    padding: 50px;
+    display: grid;
+    grid-template-areas:
+            "head"
+            "element";
+}

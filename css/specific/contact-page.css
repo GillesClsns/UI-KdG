@@ -1,0 +1,22 @@
+/* || General Styles */
+body {
+    background-color: #071B24;
+}
+
+main {
+    background-color: #08212C;
+    gap: 5vw;
+    align-content: center;
+    justify-content: center;
+    display: grid;
+    grid-template-areas:
+            "map info";
+}
+
+.contact-information {
+    grid-area: info;
+}
+
+.google-maps {
+    grid-area: map;
+}

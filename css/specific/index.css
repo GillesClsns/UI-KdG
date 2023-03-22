@@ -1,6 +1,6 @@
 /* || General Styles */
 body {
-    background: #071B24 url("../media/visuals/hero-background.png") no-repeat; /* Hero section background */
+    background: #071B24 url("../../media/visuals/hero-background.png") no-repeat; /* Hero section background */
     background-size: contain;
 }
 
@@ -100,7 +100,7 @@ h3 {
 .why-us {
     display: grid;
     text-align: center;
-    background: #071B24 url("../media/visuals/why-us-vector.png") no-repeat;
+    background: #071B24 url("../../media/visuals/why-us-vector.png") no-repeat;
     background-size: contain;
     grid-template-columns: 1fr 1fr 1fr; /* Gives each column a static size, which makes it easier to center contents */
     grid-template-areas:

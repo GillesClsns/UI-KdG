@@ -6,41 +6,38 @@
     <meta charset="UTF-8">
     <title>Contact Us</title>
     <link rel="icon" type="image/x-icon" href="/media/favicon/favicon.png">
-    <link rel="stylesheet" href="/css/site.css">
-    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/general/site.css">
+    <link rel="stylesheet" href="/css/general/normalize.css">
+    <link rel="stylesheet" href="/css/specific/contact-page.css">
 
 </head>
 
 <body>
-<h1>Contact Page</h1>
+<h1 class="hidden">Contact Page</h1>
 
 <!-- NAVIGATION BAR -->
 <header>
-    <section class="nav-bar">
-        <h2>ZORION HOSTING</h2>
-        <nav>
-            <h3 class="hidden">Navigation</h3>
-            <ul class="links">
-                <li><a href="index.html" target="_blank">Home</a></li>
-                <li class="hidden">
-                    <a href="html/product-page.html" target="_blank">Products</a>
-                    <ul>
-                        <li><a href="html/product-page.html#minecraft-section" target="_blank">Minecraft</a></li>
-                    </ul>
-                </li>
-                <li><a href="html/faq-page.html" target="_blank">FAQ</a></li>
-                <li><a href="html/customizer.html" target="_blank">Customizer</a></li>
-                <li><a href="html/contact.html" target="_blank">Contact Us</a></li>
-            </ul>
-        </nav>
-    </section>
+    <nav class="navigation">
+        <h2 class="text-logo">ZORION HOSTING</h2>
+        <ul class="main-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li id="sub-1">
+                <a href="./product-page.html" class="active">Products</a>
+                <ul >
+                    <li><a href="./product-page.html#minecraft-section">Minecraft</a></li>
+                </ul>
+            </li>
+            <li><a href="./faq-page.html">FAQ</a></li>
+            <li><a href="./customizer.html">Customizer</a></li>
+            <li><a href="./contact.html" class="active">Contact Us</a></li>
+        </ul>
+    </nav>
 </header>
 
 
 <main>
-
     <!-- Contact Information -->
-    <section>
+    <section class="contact-information">
         <h2>Contact Information</h2>
         <address>
             <p>Gilles Claessens</p>
@@ -53,8 +50,8 @@
     </section>
 
     <!-- Google Maps Integration-->
-    <section>
-        <h2>Find Us</h2>
+    <section class="google-maps">
+        <h2 class="hidden">Find Us</h2>
         <iframe
                 src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Koningin%20Astridlaan%2053+(Zorion%20HQ)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                 width="800" height="450" style="border:0;">
@@ -63,17 +60,17 @@
 </main>
 
 <!-- FOOTER -->
-<footer class="page-footer">
-    <section>
-        <h2>ZORION HOSTING</h2>
-        <ul>
-            <li><a href="product-page.html">Products</a></li>
-            <li><a href="faq-page.html">FAQ</a></li>
-            <li><a href="customizer.html">Customizer</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+<footer>
+    <nav class="navigation">
+        <h2 class="text-logo">ZORION HOSTING</h2>
+        <ul class="main-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./product-page.html">Products</a></li>
+            <li><a href="./faq-page.html">FAQ</a></li>
+            <li><a href="./customizer.html">Customizer</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
         </ul>
-    </section>
-    <p>&copy; 2023 Zorion Hosting. All rights reserved.</p>
+    </nav>
 </footer>
 
 </body>

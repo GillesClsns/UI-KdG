@@ -4,16 +4,19 @@ body {
 }
 
 /* || Broodkruimmeltje */
-.mmhm-broodkruimmeltje, .mmhm-broodkruimmeltje li a {
-    grid-area: breadcrumb;
+.mmhm-broodkruimmeltje {
     margin-left: 50px;
-    padding-right: 15px;
+
+}
+.mmhm-broodkruimmeltje li a {
+    grid-area: breadcrumb;
     text-decoration: none;
+    margin: 15px;
 }
 
 .mmhm-broodkruimmeltje ol {
-    padding: 20px 0;
-    width: fit-content;
+    padding: 0;
+    width: max-content;
     display: flex;
     list-style-type: "/";
     border: 1px #4E4E4E solid;
@@ -25,8 +28,7 @@ body {
 }
 
 .mmhm-broodkruimmeltje li:last-child a { /* Changes the color of the last element to show the current page */
-    color: #F58800;
-    opacity: 35%;
+    color: grey;
 }
 
 /* || Product Overview */
