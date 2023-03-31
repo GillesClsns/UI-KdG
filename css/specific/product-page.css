@@ -101,6 +101,18 @@ option {
     background-color: #08212C;
 }
 
+#game-1 {
+    grid-area: game1;
+}
+
+#game-2 {
+    grid-area: game2;
+}
+
+#game-3 {
+    grid-area: game3;
+}
+
 .top-games-section h2 {
     padding: 0 0 30px 0;
     grid-area: head;
@@ -110,6 +122,7 @@ option {
     display: flex;
     justify-content: center;
 }
+
 .container {
     width: 15vw;
     position: relative;

@@ -121,6 +121,18 @@ h3 {
     font-size: 24px;
 }
 
+.why-us-1 {
+    grid-area: art1;
+}
+
+.why-us-2 {
+    grid-area: art2;
+}
+
+.why-us-3 {
+    grid-area: art3;
+}
+
 /* Testimonials */
 .testimonials {
     background-color: #08212C;
@@ -131,6 +143,18 @@ h3 {
             "head head head"
             "icon icon icon"
             "test1 test2 test3";
+}
+
+#test-1 {
+    grid-area: test1;
+}
+
+#test-2 {
+    grid-area: test2;
+}
+
+#test-3 {
+    grid-area: test3;
 }
 
 .testimonials-header {
