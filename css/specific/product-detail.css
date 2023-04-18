@@ -39,7 +39,6 @@ body {
     background-color: #08212C;
     display: grid;
     grid-template-areas:
-            "breadcrumb nothing"
             "image head"
             "image description"
             "image properties";

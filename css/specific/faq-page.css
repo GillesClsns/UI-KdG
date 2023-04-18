@@ -7,8 +7,19 @@ body {
     background-color: #08212C;
     align-content: center;
     padding: 50px;
-    display: grid;
-    grid-template-areas:
-            "head"
-            "element";
+    height: 30vw;
+    display: block;
+}
+
+summary {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+summary:hover {
+    cursor: pointer;
+}
+
+summary::marker {
+    color: #F58800;
 }
