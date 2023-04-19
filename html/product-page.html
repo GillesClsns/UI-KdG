@@ -16,21 +16,21 @@
 
 <!-- NAVIGATION BAR -->
 <header>
-        <nav class="navigation">
-            <h2 class="text-logo">ZORION HOSTING</h2>
-            <ul class="main-nav">
-                <li><a href="../index.html">Home</a></li>
-                <li id="sub-1">
-                    <a href="./product-page.html" class="active">Products</a>
-                    <ul >
-                        <li><a href="./product-page.html#minecraft-section">Minecraft</a></li>
-                    </ul>
-                </li>
-                <li><a href="./faq-page.html">FAQ</a></li>
-                <li><a href="./customizer.html">Customizer</a></li>
-                <li><a href="./contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+    <nav class="navigation">
+        <h2 class="text-logo">ZORION HOSTING</h2>
+        <ul class="main-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li id="sub-1">
+                <a href="./product-page.html" class="active">Products</a>
+                <ul>
+                    <li><a href="./product-page.html#minecraft-section">Minecraft</a></li>
+                </ul>
+            </li>
+            <li><a href="./faq-page.html">FAQ</a></li>
+            <li><a href="./customizer.html">Customizer</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
 </header>
 
 <!-- HERO SECTION -->
@@ -54,6 +54,7 @@
 <!-- FEATURED GAMES SECTION -->
 <section class="top-games-section">
     <h2>POPULAR GAMES</h2>
+
     <section id="game-1" class="top-games">
         <h3 class="hidden">Game-1</h3>
         <section class="container" onclick="window.location.href='#minecraft-section';">
@@ -92,178 +93,217 @@
 </section>
 
 <main>
-    <!-- PRODUCT SECTION -->
+
+    <!-- PRODUCT FILTER -->
+    <input id="chkSurvival" type="checkbox" value="Survival" checked>
+    <input id="chkCrafting" type="checkbox" value="Crafting" checked>
+    <input id="chkRacing" type="checkbox" value="Racing" checked>
+    <input id="chkFarming" type="checkbox" value="Farming" checked>
+    <input id="chkRPG" type="checkbox" value="RPG" checked>
+
     <section class="filter-section">
+
         <h2>Our packages</h2>
-        <form>
-            <label for="category-select">Filter by genre:</label>
-            <select id="category-select">
-                <option value="all">All</option>
-                <option value="cat-survival">Survival</option>
-                <option value="cat-crafting">Crafting</option>
-                <option value="cat-racing">Racing</option>
-                <option value="cat-fps">FPS</option>
-                <option value="cat-rpg">RPG</option>
-            </select>
-        </form>
+
+        <aside>
+            <label for="chkSurvival">Survival</label>
+            <label for="chkCrafting">Crafting</label>
+            <label for="chkRacing">Racing</label>
+            <label for="chkFarming">Farming</label>
+            <label for="chkRPG">RPG</label>
+        </aside>
+
     </section>
 
-
+    <!-- GAME: MINECRAFT -->
     <section id="minecraft-section">
         <h2>Minecraft</h2>
-        <ul class="product-list" data-category="cat-survival cat-crafting">
-            <li>
+        <ul class="product-list">
+
+            <li class="cat-crafting">
                 <a href="minecraft-packages/minecraft-wood.html"><img
                         src="../media/thumbnails/minecraft-small.jpg"
                         alt="Minecraft Thumbnail"></a>
                 <p>Minecraft [Wood]</p>
                 <p>€5 p.m.</p>
             </li>
-            <li>
+
+            <li class="cat-crafting">
                 <a href="minecraft-packages/minecraft-stone.html"><img
                         src="../media/thumbnails/minecraft-small.jpg" alt="Minecraft Thumbnail"></a>
                 <p>Minecraft [Stone]</p>
                 <p>€8 p.m.</p>
             </li>
-            <li>
+
+            <li class="cat-crafting">
                 <a href="minecraft-packages/minecraft-iron.html">
                     <img src="../media/thumbnails/minecraft-small.jpg" alt="Minecraft Thumbnail"></a>
                 <p>Minecraft [Iron]</p>
                 <p>€10 p.m.</p>
             </li>
-            <li>
+
+            <li class="cat-crafting">
                 <img src="../media/thumbnails/minecraft-small.jpg" alt="Minecraft Thumbnail">
                 <p>Minecraft [Gold]</p>
                 <p>€12 p.m.</p>
             </li>
-            <li>
+
+            <li class="cat-crafting">
                 <img src="../media/thumbnails/minecraft-small.jpg" alt="Minecraft Thumbnail">
                 <p>Minecraft [Diamond]</p>
                 <p>€15 p.m.</p>
             </li>
-            <li>
+
+            <li class="cat-crafting">
                 <img src="../media/thumbnails/minecraft-small.jpg" alt="Minecraft Thumbnail">
                 <p>Minecraft [Netherite]</p>
                 <p>€25 p.m.</p>
             </li>
-            <li>
+
+            <li class="cat-crafting">
                 <img src="../media/thumbnails/minecraft-small.jpg" alt="Minecraft Thumbnail">
                 <p>Minecraft [Custom]</p>
                 <p>Price Depends</p>
             </li>
+
         </ul>
     </section>
 
+    <!-- GAME: RUST -->
     <section class="backcolor-2" id="rust-section">
         <h2>Rust</h2>
-        <ul class="product-list" data-category="cat-survival cat-crafting">
-            <li>
+        <ul class="product-list">
+
+            <li class="cat-survival">
                 <img src="../media/thumbnails/rust-small.jpeg" alt="Rust Thumbnail">
                 <p>Rust [Beginner]</p>
                 <p>€5 p.m.</p>
             </li>
-            <li>
+
+            <li class="cat-survival">
                 <img src="../media/thumbnails/rust-small.jpeg" alt="Rust Thumbnail">
                 <p>Rust [Advanced]</p>
                 <p>€8 p.m.</p>
             </li>
-            <li>
+
+            <li class="cat-survival">
                 <img src="../media/thumbnails/rust-small.jpeg" alt="Rust Thumbnail">
                 <p>Rust [Professional]</p>
                 <p>€18 p.m.</p>
             </li>
-            <li>
+
+            <li class="cat-survival">
                 <img src="../media/thumbnails/rust-small.jpeg" alt="Rust Thumbnail">
                 <p>Rust [Custom]</p>
                 <p>Price Depends</p>
             </li>
+
         </ul>
     </section>
 
+    <!-- GAME: ARK -->
     <section id="ark-section">
         <h2 id="back-color-2">ARK Survival</h2>
-        <ul class="product-list" data-category="cat-survival cat-crafting">
-            <li>
+        <ul class="product-list">
+
+            <li class="cat-survival">
                 <img src="../media/thumbnails/ark-survival-small.jpeg" alt="Ark Survival Thumbnail">
                 <p>ARK Survival [Beginner]</p>
                 <p>€5 p.m.</p>
             </li>
-            <li>
+
+            <li class="cat-survival">
                 <img src="../media/thumbnails/ark-survival-small.jpeg" alt="Ark Survival Thumbnail">
                 <p>ARK Survival [Advanced]</p>
                 <p>€8 p.m.</p>
             </li>
-            <li>
+
+            <li class="cat-survival">
                 <img src="../media/thumbnails/ark-survival-small.jpeg" alt="Ark Survival Thumbnail">
                 <p>ARK Survival [Professional]</p>
                 <p>€18 p.m.</p>
             </li>
-            <li>
+
+            <li class="cat-survival">
                 <img src="../media/thumbnails/ark-survival-small.jpeg" alt="Ark Survival Thumbnail">
                 <p>ARK Survival [Custom]</p>
                 <p>Price Depends</p>
             </li>
+
         </ul>
     </section>
 
+    <!-- GAME: VALHEIM -->
     <section class="backcolor-2">
         <h2>Valheim</h2>
-        <ul class="product-list" data-category="cat-survival cat-crafting">
-            <li>
+        <ul class="product-list">
+
+            <li class="cat-rpg">
                 <img src="../media/thumbnails/valheim-small.png" alt="Valheim Thumbnail">
                 <p>Valheim [Beginner]</p>
                 <p>€5 p.m.</p>
             </li>
-            <li>
+
+            <li class="cat-rpg">
                 <img src="../media/thumbnails/valheim-small.png" alt="Valheim Thumbnail">
                 <p>Valheim [Advanced]</p>
                 <p>€8 p.m.</p>
             </li>
+
         </ul>
     </section>
 
+    <!-- GAME: FARMING SIMULATOR -->
     <section>
         <h2>Farming Simulator</h2>
-        <ul class="product-list" data-category="cat-survival cat-crafting">
-            <li>
+        <ul class="product-list">
+
+            <li class="cat-farming">
                 <img src="../media/thumbnails/farming-simulator-small.jpg" alt="Farming Simulator Thumbnail">
                 <p>Farming Simulator [Beginner]</p>
                 <p>€5 p.m.</p>
             </li>
-            <li>
+
+            <li class="cat-farming">
                 <img src="../media/thumbnails/farming-simulator-small.jpg" alt="Farming Simulator Thumbnail">
                 <p>Farming Simulator [Professional]</p>
                 <p>€18 p.m.</p>
             </li>
-            <li>
+
+            <li class="cat-farming">
                 <img src="../media/thumbnails/farming-simulator-small.jpg" alt="Farming Simulator Thumbnail">
                 <p>Farming Simulator [Custom]</p>
                 <p>Price Depends</p>
             </li>
+
         </ul>
     </section>
 
+    <!-- GAME: HYTALE -->
     <section class="backcolor-2">
         <h2>Hytale (Coming Soon)</h2>
-        <ul class="product-list" data-category="cat-survival cat-crafting">
-            <li>
+        <ul class="product-list">
+
+            <li class="cat-survival">
                 <img src="../media/thumbnails/hytale-small.png" alt="Hytale Thumbnail">
                 <p>Hytale [Beginner]</p>
                 <p>€5 p.m.</p>
             </li>
-            <li>
+
+            <li class="cat-survival">
                 <img src="../media/thumbnails/hytale-small.png" alt="Hytale Thumbnail">
                 <p>Hytale [Professional]</p>
                 <p>€18 p.m.</p>
             </li>
-            <li>
+
+            <li class="cat-survival">
                 <img src="../media/thumbnails/hytale-small.png" alt="Hytale Thumbnail">
                 <p>Hytale [Custom]</p>
                 <p>Price Depends</p>
             </li>
+
         </ul>
     </section>
-
 </main>
 
 <!-- FOOTER -->

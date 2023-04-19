@@ -4,7 +4,7 @@ body {
     background-size: contain;
 }
 
-main h2 {
+main h2, .filter-section aside {
     margin-left: 50px;
     padding-top: 20px;
 }
@@ -160,4 +160,20 @@ option {
     color: white;
     font-size: 16px;
     padding: 16px 32px;
+}
+
+.filter-section aside label {
+    margin-right: 30px;
+}
+
+.product-list li, input[type="checkbox"] {
+    display: none;
+}
+
+input#chkSurvival:checked ~ section ul.product-list li.cat-survival,
+input#chkCrafting:checked ~ section ul.product-list li.cat-crafting,
+input#chkFarming:checked ~ section ul.product-list li.cat-farming,
+input#chkRPG:checked ~ section ul.product-list li.cat-rpg,
+input#chkRacing:checked ~ section ul.product-list li.cat-racing {
+    display: initial;
 }
