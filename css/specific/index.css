@@ -141,12 +141,7 @@ h3 {
     grid-template-columns: 1fr 1fr 1fr; /* Gives each column a static size, which makes it easier to center contents */
     grid-template-areas:
             "head head head"
-            "icon icon icon"
             "test1 test2 test3";
-}
-
-#testimonials-icon {
-    grid-area: icon;
 }
 
 #test-1 {

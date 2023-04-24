@@ -11,7 +11,7 @@ main h2, .filter-section aside {
 
 /* || Hero Section */
 .hero-section {
-    height: 850px;
+    height: 950px;
 }
 
 .hero-section article {
@@ -170,10 +170,35 @@ option {
     display: none;
 }
 
-input#chkSurvival:checked ~ section ul.product-list li.cat-survival,
-input#chkCrafting:checked ~ section ul.product-list li.cat-crafting,
-input#chkFarming:checked ~ section ul.product-list li.cat-farming,
-input#chkRPG:checked ~ section ul.product-list li.cat-rpg,
-input#chkRacing:checked ~ section ul.product-list li.cat-racing {
+input#chkPrice5:checked ~ section ul.product-list li.price-five,
+input#chkPrice8:checked ~ section ul.product-list li.price-eight,
+input#chkPrice10:checked ~ section ul.product-list li.price-ten,
+input#chkPrice12:checked ~ section ul.product-list li.price-twelf,
+input#chkPrice15:checked ~ section ul.product-list li.price-fifteen,
+input#chkPrice18:checked ~ section ul.product-list li.price-eighteen,
+input#chkPrice25:checked ~ section ul.product-list li.price-twentyfive,
+input#chkPriceDepends:checked ~ section ul.product-list li.price-depends {
     display: initial;
+}
+
+input#chkPrice5 ~ .filter-section aside label[for="chkPrice5"]::before,
+input#chkPrice8 ~ .filter-section aside label[for="chkPrice8"]::before,
+input#chkPrice10 ~ .filter-section label[for="chkPrice10"]::before,
+input#chkPrice12 ~ .filter-section aside label[for="chkPrice12"]::before,
+input#chkPrice15 ~ .filter-section aside label[for="chkPrice15"]::before,
+input#chkPrice18 ~ .filter-section aside label[for="chkPrice18"]::before,
+input#chkPrice25 ~ .filter-section aside label[for="chkPrice25"]::before,
+input#chkPriceDepends ~ .filter-section aside label[for="chkPriceDepends"]::before {
+    content: '\2610';
+}
+
+input#chkPrice5:checked ~ .filter-section aside label[for="chkPrice5"]::before,
+input#chkPrice8:checked ~ .filter-section aside label[for="chkPrice8"]::before,
+input#chkPrice10:checked ~ .filter-section aside label[for="chkPrice10"]::before,
+input#chkPrice12:checked ~ .filter-section aside label[for="chkPrice12"]::before,
+input#chkPrice15:checked ~ .filter-section aside label[for="chkPrice15"]::before,
+input#chkPrice18:checked ~ .filter-section aside label[for="chkPrice18"]::before,
+input#chkPrice25:checked ~ .filter-section aside label[for="chkPrice25"]::before,
+input#chkPriceDepends:checked ~ .filter-section aside label[for="chkPriceDepends"]::before {
+    content: '\2612';
 }

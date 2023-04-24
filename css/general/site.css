@@ -38,6 +38,10 @@ body {
     text-underline-offset: 10px;
 }
 
+.main-nav ul li {
+    margin-bottom: 10px;
+}
+
 .main-nav {
     display: flex;
     list-style: none;
