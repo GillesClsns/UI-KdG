@@ -19,6 +19,14 @@ body {
     background-color: #08212C; /* Second backcolor for some variation in background */
 }
 
+.valid-input {
+    background-color: green;
+}
+
+.invalid-input {
+    background-color: red;
+}
+
 /* || Navigation bar for our header and footer */
 .navigation {
     display: flex;
