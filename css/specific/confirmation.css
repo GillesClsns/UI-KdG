@@ -4,12 +4,16 @@ body {
 
 /* Center the form on the page */
 main {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    /*width: 80%;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+
+    display: grid;
+    grid-template-areas: "container fiche";
 }
 
 table {
+    grid-area: container;
     border-collapse: collapse;
     width: 100%;
 }
@@ -17,4 +21,19 @@ table {
 th, td {
     border: 1px solid #ddd;
     padding: 8px;
+}
+
+.product-list {
+    margin-left: 50px;
+    max-width: 70vw;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-list li {
+    max-width: 25%;
+    text-align: center;
 }

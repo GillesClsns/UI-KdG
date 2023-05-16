@@ -1,6 +1,11 @@
+// Wait for the window to load before executing the code
 window.addEventListener("load", init);
 
+/**
+ * Initializes the page by retrieving and updating elements with URL parameters.
+ */
 function init() {
+
     let searchParams = new URLSearchParams(window.location.search);
 
     let name = searchParams.get("name");
@@ -33,10 +38,15 @@ function init() {
     updateElement("server-motd", serverMotd);
 }
 
-
+/**
+ * Updates the content of an HTML element with the provided value.
+ * @param {string} id - The ID of the HTML element to update.
+ * @param {string} value - The new value to set for the element.
+ */
 function updateElement(id, value) {
     let element = document.getElementById(id);
     if (element) {
         element.innerHTML = value;
+
     }
 }

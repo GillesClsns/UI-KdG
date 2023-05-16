@@ -1,5 +1,9 @@
+// Wait for the window to load before executing the code
 window.addEventListener("load", init);
 
+/**
+ * Initializes the form by adding event listeners to the relevant input elements.
+ */
 function init() {
 
     let form = document.getElementById("form");
@@ -20,6 +24,10 @@ function init() {
 
 }
 
+/**
+ * Handles form submission by validating all fields.
+ * @param {Event} event - The form submit event.
+ */
 function formSubmit(event) {
 
     let nameInput = document.getElementById("name");
@@ -52,6 +60,10 @@ function formSubmit(event) {
     }
 }
 
+/**
+ * Validates the name input field.
+ * @param {{target: HTMLElement}} event - The input change event.
+ */
 function validateName(event) {
     let nameInput = event.target;
     let value = nameInput.value.trim();
@@ -68,6 +80,10 @@ function validateName(event) {
     }
 }
 
+/**
+ * Validates the email input field.
+ * @param {{target: HTMLElement}} event - The input change event.
+ */
 function validateEmail(event) {
     let emailInput = event.target;
     let value = emailInput.value.trim();
@@ -85,6 +101,10 @@ function validateEmail(event) {
     }
 }
 
+/**
+ * Validates the address input field.
+ * @param {{target: HTMLElement}} event - The input change event.
+ */
 function validateAddress(event) {
     let addressInput = event.target;
     let value = addressInput.value.trim();
@@ -101,6 +121,10 @@ function validateAddress(event) {
     }
 }
 
+/**
+ * Validates the city input field.
+ * @param {{target: HTMLElement}} event - The input change event.
+ */
 function validateCity(event) {
     let cityInput = event.target;
     let value = cityInput.value.trim();
@@ -117,6 +141,10 @@ function validateCity(event) {
     }
 }
 
+/**
+ * Validates the state input field.
+ * @param {{target: HTMLElement}} event - The input change event.
+ */
 function validateState(event) {
     let stateInput = event.target;
     let value = stateInput.value.trim();
@@ -133,6 +161,10 @@ function validateState(event) {
     }
 }
 
+/**
+ * Validates the ZIP code input field.
+ * @param {{target: HTMLElement}} event - The input change event.
+ */
 function validateZip(event) {
     let zipInput = event.target;
     let value = zipInput.value.trim();
@@ -150,6 +182,10 @@ function validateZip(event) {
     }
 }
 
+
+/**
+ * Validates the billing period select field.
+ */
 function validateBillingPeriod() {
     let billingPeriodSelect = document.getElementById("billing-period");
     let errorSpan = document.getElementById("billing-period-error");
@@ -163,6 +199,9 @@ function validateBillingPeriod() {
     }
 }
 
+/**
+ * Validates the player slots input field.
+ */
 function validatePlayerSlots() {
     let playerSlotsInput = document.getElementById("player-slots");
     let errorSpan = document.getElementById("player-slots-error");
@@ -176,6 +215,9 @@ function validatePlayerSlots() {
     }
 }
 
+/**
+ * Validates the server name input field.
+ */
 function validateServerName() {
     let serverNameInput = document.getElementById("server-name");
     let errorSpan = document.getElementById("server-name-error");
@@ -189,6 +231,9 @@ function validateServerName() {
     }
 }
 
+/**
+ * Validates the server password input field.
+ */
 function validateServerPassword() {
     let serverPasswordInput = document.getElementById("server-password");
     let errorSpan = document.getElementById("server-password-error");
