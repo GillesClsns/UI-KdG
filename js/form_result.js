@@ -11,6 +11,7 @@ function init() {
     let zip = searchParams.get("zip");
     let city = searchParams.get("city");
     let state = searchParams.get("state");
+    let selectedPackage = searchParams.get("product-selection");
     let billingPeriod = searchParams.get("billing-period");
     let playerSlots = searchParams.get("player-slots");
     let serverLocation = searchParams.get("server-location");
@@ -23,6 +24,7 @@ function init() {
     updateElement("email", email);
     updateElement("phone", phone);
     updateElement("address", `${address}, ${zip} ${city}, ${state}`);
+    updateElement("product-selection", selectedPackage);
     updateElement("billing-period", billingPeriod);
     updateElement("player-slots", playerSlots);
     updateElement("server-location", serverLocation);

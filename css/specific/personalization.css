@@ -91,3 +91,7 @@ output {
     display: inline-block;
     margin-left: 10px;
 }
+
+select > option {
+    color: black;
+}

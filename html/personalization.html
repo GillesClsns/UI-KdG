@@ -65,7 +65,7 @@
             <span id="address-error"></span><br>
 
             <label for="city">City:</label>
-            <input type="text" id="city" name="city" placeholder="Antwerpen" required>
+            <input type="text" id="city" name="city" placeholder="Kapellen" required>
             <span id="city-error"></span><br>
 
             <label for="state">State:</label>
@@ -80,6 +80,14 @@
 
         <fieldset id="personalization-options">
             <legend>Personalization Options</legend>
+
+            <label for="product-selection">Chosen package:</label>
+            <select id="product-selection" name="product-selection">
+                <option value="monthly">Minecraft [Wood]</option>
+                <option value="quarterly">Rust [Beginner]</option>
+                <option value="annually">Ark Survival [Beginner]</option>
+            </select>
+
 
             <label for="billing-period">Billing Period:</label>
             <select id="billing-period" name="billing-period">
