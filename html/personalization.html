@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" xmlns="http://www.w3.org/1999/html">
 <head>
 
     <meta charset="UTF-8">
@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="/css/general/site.css">
     <link rel="stylesheet" href="/css/specific/personalization.css">
 
-    <script src="/js/form_validation.js"></script>
+    <script src="../js/form_validation.js" defer></script>
+    <script src="../js/dyn_data.js" defer></script>
+    <script src="../js/dyn_form.js" defer></script>
 
 </head>
 
@@ -82,11 +84,7 @@
             <legend>Personalization Options</legend>
 
             <label for="product-selection">Chosen package:</label>
-            <select id="product-selection" name="product-selection">
-                <option value="monthly">Minecraft [Wood]</option>
-                <option value="quarterly">Rust [Beginner]</option>
-                <option value="annually">Ark Survival [Beginner]</option>
-            </select>
+            <select id="product-selection" name="product-selection"></select>
 
 
             <label for="billing-period">Billing Period:</label>

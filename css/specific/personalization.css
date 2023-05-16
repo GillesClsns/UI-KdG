@@ -92,6 +92,10 @@ output {
     margin-left: 10px;
 }
 
-select > option {
+select > optgroup > option {
+    color: black;
+}
+
+select > optgroup {
     color: black;
 }

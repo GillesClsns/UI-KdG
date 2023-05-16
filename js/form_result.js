@@ -3,8 +3,7 @@ window.addEventListener("load", init);
 function init() {
     let searchParams = new URLSearchParams(window.location.search);
 
-    let firstname = searchParams.get("firstname");
-    let lastname = searchParams.get("lastname");
+    let name = searchParams.get("name");
     let email = searchParams.get("email");
     let phone = searchParams.get("phone");
     let address = searchParams.get("address");
@@ -20,7 +19,7 @@ function init() {
     let serverPassword = searchParams.get("server-password");
     let serverMotd = searchParams.get("server-motd");
 
-    updateElement("name", `${firstname} ${lastname}`);
+    updateElement("name", `${name}`);
     updateElement("email", email);
     updateElement("phone", phone);
     updateElement("address", `${address}, ${zip} ${city}, ${state}`);

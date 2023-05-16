@@ -1,12 +1,114 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
+    <meta charset="UTF-8">
+    <title>Confirmation</title>
+    <link rel="icon" type="image/x-icon" href="/media/favicon/favicon.png">
+    <link rel="stylesheet" href="/css/general/normalize.css">
+    <link rel="stylesheet" href="/css/general/site.css">
+    <link rel="stylesheet" href="/css/specific/confirmation.css">
+    <script src="../js/form_result.js" defer></script>
+    <script src="../js/dyn_result.js" defer></script>
+
+</head>
+
+<body>
 <h1 class="hidden">Confirmation Page</h1>
+
+<!-- NAVIGATION BAR -->
+<header>
+    <nav class="navigation">
+        <h2 class="text-logo">ZORION HOSTING</h2>
+        <ul class="main-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li id="sub-1">
+                <a href="./product-page.html" class="active">Products</a>
+                <ul>
+                    <li><a href="./product-page.html#minecraft-section">Minecraft</a></li>
+                    <li><a href="./product-page.html#rust-section">Rust</a></li>
+                    <li><a href="./product-page.html#ark-section">ARK Survival</a></li>
+                    <li><a href="./product-page.html#valheim-section">Valheim</a></li>
+                    <li><a href="./product-page.html#farming-section">Farming Simulator</a></li>
+                    <li><a href="./product-page.html#hytale-section">Hytale</a></li>
+                </ul>
+            </li>
+            <li><a href="./faq-page.html">FAQ</a></li>
+            <li><a href="./personalization.html">Customizer</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <table>
+        <tr>
+            <th colspan="2">Confirmation Details</th>
+        </tr>
+        <tr>
+            <td>Full Name:</td>
+            <td id="name"></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td id="email"></td>
+        </tr>
+        <tr>
+            <td>Phone:</td>
+            <td id="phone"></td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td id="address"></td>
+        </tr>
+        <tr>
+            <td>Selected Package:</td>
+            <td id="product-selection"></td>
+        </tr>
+        <tr>
+            <td>Billing Period:</td>
+            <td id="billing-period"></td>
+        </tr>
+        <tr>
+            <td>Player Slots:</td>
+            <td id="player-slots"></td>
+        </tr>
+        <tr>
+            <td>Server Location:</td>
+            <td id="server-location"></td>
+        </tr>
+        <tr>
+            <td>RAM:</td>
+            <td id="ram"></td>
+        </tr>
+        <tr>
+            <td>Server Name:</td>
+            <td id="server-name"></td>
+        </tr>
+        <tr>
+            <td>Server Password:</td>
+            <td id="server-password"></td>
+        </tr>
+        <tr>
+            <td>Server MOTD:</td>
+            <td id="server-motd"></td>
+        </tr>
+    </table>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <nav class="navigation">
+        <h2 class="text-logo">ZORION HOSTING</h2>
+        <ul class="main-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./product-page.html">Products</a></li>
+            <li><a href="./faq-page.html">FAQ</a></li>
+            <li><a href="personalization.html">Customizer</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</footer>
 
 </body>
 </html>
