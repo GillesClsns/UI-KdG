@@ -9,26 +9,35 @@ body {
     grid-gap: 10px;
 }
 
-#main {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#personal-information, .product-list {
+#personal-information {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
     background-color: #071B24;
 }
 
-#personal-information, #order-confirmation, #product-information, .product-list {
+#personal-information, #order-confirmation, #product-fiche {
     padding: 10px;
     width: 70%;
-    display: block;
     margin: 0 auto;
 }
 
+#product-fiche {
+    display: grid;
+    gap: 25px;
+    grid-template-areas: "info img";
+    justify-items: center;
+    margin-top: 20px;
+}
+
+#product-information {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+
+}
+
 .product-list {
-    grid-area: product;
+    width: 50%;
+    grid-area: img;
     text-align: center;
     list-style: none;
-    justify-items: center;
 }

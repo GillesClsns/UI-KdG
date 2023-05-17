@@ -37,7 +37,7 @@ function createProductFiche() {
                 listItem.appendChild(descriptionElement);
 
                 // Append the product fiche to the container
-                container.appendChild(listItem);
+                document.getElementById("product-fiche").appendChild(listItem);
 
             }
 
