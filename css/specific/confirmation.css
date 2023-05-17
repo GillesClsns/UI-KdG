@@ -1,39 +1,34 @@
 body {
     background-color: #071B24;
+    align-content: center
 }
 
-/* Center the form on the page */
-main {
-    /*width: 80%;*/
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
-
+.info-list {
     display: grid;
-    grid-template-areas: "container fiche";
+    grid-template-columns: 10vw auto;
+    grid-gap: 10px;
 }
 
-table {
-    grid-area: container;
-    border-collapse: collapse;
-    width: 100%;
+#main {
+    margin-left: auto;
+    margin-right: auto;
 }
 
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
+#personal-information, .product-list {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+    background-color: #071B24;
+}
+
+#personal-information, #order-confirmation, #product-information, .product-list {
+    padding: 10px;
+    width: 70%;
+    display: block;
+    margin: 0 auto;
 }
 
 .product-list {
-    margin-left: 50px;
-    max-width: 70vw;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.product-list li {
-    max-width: 25%;
+    grid-area: product;
     text-align: center;
+    list-style: none;
+    justify-items: center;
 }

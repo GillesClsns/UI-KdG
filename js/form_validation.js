@@ -16,7 +16,7 @@ function init() {
 
     form.addEventListener("submit", formSubmit);
     nameInput.addEventListener("change", validateName);
-    emailInput.addEventListener("change", validateEmail);
+    emailInput.addEventListener("input", validateEmail);
     billingPeriodSelect.addEventListener("input", validateBillingPeriod);
     playerSlotsInput.addEventListener("input", validatePlayerSlots);
     serverNameInput.addEventListener("input", validateServerName);
