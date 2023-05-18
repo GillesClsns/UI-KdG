@@ -48,33 +48,33 @@
 
         <fieldset id="personal-information">
             <legend>Personal Information</legend>
-            <label for="name">Name:</label>
+            <label for="name">* Name:</label>
             <input type="text" id="name" name="name" placeholder="Gilles Claessens" required>
             <span id="name-error"></span><br>
 
-            <label for="email">Email:</label>
+            <label for="email">* Email:</label>
             <input type="email" id="email" name="email" placeholder="claessens@example.com" required>
             <span id="email-error"></span><br>
 
-            <label for="phone">Phone:</label>
+            <label for="phone">* Phone:</label>
             <input type="tel" id="phone" name="phone" placeholder="+32 468 24 46 64" required><br>
         </fieldset>
 
         <fieldset id="contact-information">
             <legend>Contact Information</legend>
-            <label for="address">Address:</label>
+            <label for="address">* Address:</label>
             <input type="text" id="address" name="address" placeholder="Nationalestraat 5" required>
             <span id="address-error"></span><br>
 
-            <label for="city">City:</label>
+            <label for="city">* City:</label>
             <input type="text" id="city" name="city" placeholder="Kapellen" required>
             <span id="city-error"></span><br>
 
-            <label for="state">State:</label>
+            <label for="state">* State:</label>
             <input type="text" id="state" name="state" placeholder="Antwerpen" required>
             <span id="state-error"></span><br>
 
-            <label for="zip">Zip Code:</label>
+            <label for="zip">* Zip Code:</label>
             <input type="text" id="zip" name="zip" placeholder="2000" required>
             <span id="zip-error"></span><br>
         </fieldset>
@@ -83,38 +83,39 @@
         <fieldset id="personalization-options">
             <legend>Personalization Options</legend>
 
-            <label for="product-selection">Chosen package:</label>
-            <select id="product-selection" name="product-selection"></select>
+            <label for="product-selection">* Chosen package:</label>
+            <select id="product-selection" name="product-selection" required></select>
 
 
-            <label for="billing-period">Billing Period:</label>
-            <select id="billing-period" name="billing-period">
+            <label for="billing-period">* Billing Period:</label>
+            <select id="billing-period" name="billing-period" required>
                 <option value="monthly">Monthly</option>
                 <option value="quarterly">Quarterly</option>
                 <option value="annually">Annually</option>
             </select>
             <span id="billing-period-error"></span><br>
 
-            <label for="player-slots">Player Slots:</label>
+            <label for="player-slots">* Player Slots:</label>
             <input type="number" id="player-slots" name="player-slots" min="1" max="100" value="10" required>
             <span id="player-slots-error"></span><br>
 
-            <label>Server Location:</label><br>
+            <label>* Server Location:</label><br>
             <label for="server-location-us">US:</label>
             <input type="radio" id="server-location-us" name="server-location" value="us" required>
 
             <label for="server-location-eu">EU:</label>
             <input type="radio" id="server-location-eu" name="server-location" value="eu"><br>
 
-            <label for="ram">RAM:</label>
-            <input type="range" id="ram" name="ram" min="1" max="16" step="1" value="8" oninput="updateRamOutput()">
+            <label for="ram">* RAM:</label>
+            <input type="range" id="ram" name="ram" min="1" max="16" step="1" value="8" oninput="updateRamOutput()"
+                   required>
             <output for="ram" id="ram-output">8GB</output>
 
-            <label for="server-name">Server Name:</label>
+            <label for="server-name">* Server Name:</label>
             <input type="text" id="server-name" name="server-name" maxlength="50" required>
             <span id="server-name-error"></span><br>
 
-            <label for="server-password">Server Password:</label>
+            <label for="server-password">* Server Password:</label>
             <input type="password" id="server-password" name="server-password" minlength="8" required>
             <small>Minimum length: 8 characters</small><br>
             <span id="server-password-error"></span>
