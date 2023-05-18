@@ -6,22 +6,33 @@ window.addEventListener("load", init);
  */
 function init() {
 
-    let form = document.getElementById("form");
-    let nameInput = document.getElementById("name");
-    let emailInput = document.getElementById("email");
-    let billingPeriodSelect = document.getElementById("billing-period");
-    let playerSlotsInput = document.getElementById("player-slots");
-    let serverNameInput = document.getElementById("server-name");
-    let serverPasswordInput = document.getElementById("server-password");
+    const form = document.getElementById("form");
 
     form.addEventListener("submit", formSubmit);
-    nameInput.addEventListener("input", validateName);
-    emailInput.addEventListener("input", validateEmail);
-    billingPeriodSelect.addEventListener("input", validateBillingPeriod);
-    playerSlotsInput.addEventListener("input", validatePlayerSlots);
-    serverNameInput.addEventListener("input", validateServerName);
-    serverPasswordInput.addEventListener("input", validateServerPassword);
+    addInputEventListener("name", validateName);
+    addInputEventListener("email", validateEmail);
+    addInputEventListener("address", validateAddress);
+    addInputEventListener("city", validateCity);
+    addInputEventListener("state", validateState);
+    addInputEventListener("zip", validateZip);
+    addInputEventListener("billing-period", validateBillingPeriod);
+    addInputEventListener("player-slots", validatePlayerSlots);
+    addInputEventListener("server-name", validateServerName);
+    addInputEventListener("server-password", validateServerPassword);
+    addInputEventListener('ram', updateRamOutput);
 
+}
+
+/**
+ * Adds an input event listener to the specified input element.
+ * @param {string} elementId - The ID of the input element.
+ * @param {Function} validationFunction - The validation function to be called on input.
+ */
+function addInputEventListener(elementId, validationFunction) {
+    const inputElement = document.getElementById(elementId);
+    inputElement.addEventListener("input", (event) => {
+        validationFunction(event);
+    });
 }
 
 /**
@@ -29,32 +40,18 @@ function init() {
  * @param {Event} event - The form submit event.
  */
 function formSubmit(event) {
+    const form = event.target;
+    const inputs = form.querySelectorAll("input, select");
 
-    let nameInput = document.getElementById("name");
-    let emailInput = document.getElementById("email");
-    let addressInput = document.getElementById("address");
-    let cityInput = document.getElementById("city");
-    let stateInput = document.getElementById("state");
-    let zipInput = document.getElementById("zip");
-    let billingPeriodSelect = document.getElementById("billing-period");
-    let playerSlotsInput = document.getElementById("player-slots");
-    let serverNameInput = document.getElementById("server-name");
-    let serverPasswordInput = document.getElementById("server-password");
+    inputs.forEach((input) => {
+        const validationFunctionName = input.dataset.validation;
+        if (validationFunctionName) {
+            const validationFunction = window[validationFunctionName];
+            validationFunction({target: input});
+        }
+    });
 
-    // Validate fields upon submission
-    validateName({target: nameInput});
-    validateEmail({target: emailInput});
-    validateAddress({target: addressInput});
-    validateCity({target: cityInput});
-    validateState({target: stateInput});
-    validateZip({target: zipInput});
-    validateBillingPeriod({target: billingPeriodSelect});
-    validatePlayerSlots({target: playerSlotsInput});
-    validateServerName({target: serverNameInput});
-    validateServerPassword({target: serverPasswordInput});
-
-    // Check for invalid fields
-    let invalidFields = document.querySelectorAll(".invalid-input");
+    const invalidFields = form.querySelectorAll(".invalid-input");
     if (invalidFields.length > 0) {
         event.preventDefault(); // Prevent form submission
     }
@@ -65,10 +62,10 @@ function formSubmit(event) {
  * @param {{target: HTMLElement}} event - The input change event.
  */
 function validateName(event) {
-    let nameInput = event.target;
-    let value = nameInput.value.trim();
 
-    let regex = /^\S.*\S$/;
+    const nameInput = event.target;
+    const value = nameInput.value.trim();
+    const regex = /^\S.*\S$/;
 
     if (value.length > 0 && regex.test(value)) {
         nameInput.classList.add("valid-input");
@@ -76,6 +73,7 @@ function validateName(event) {
     } else {
         nameInput.classList.remove("valid-input");
         nameInput.classList.add("invalid-input");
+        showErrorBanner(nameInput, 'Name cannot start and end with whitespace');
     }
 }
 
@@ -86,9 +84,9 @@ function validateName(event) {
  */
 function validateEmail(event) {
 
-    let emailInput = event.target;
-    let value = emailInput.value.trim();
-    let pattern = /^[A-Za-z]+\.[A-Za-z]+@student\.kdg\.be$/;
+    const emailInput = event.target;
+    const value = emailInput.value.trim();
+    const pattern = /^[A-Za-z]+\.[A-Za-z]+@student\.kdg\.be$/;
 
     if (value.length > 0 && pattern.test(value)) {
         emailInput.classList.add("valid-input");
@@ -96,6 +94,7 @@ function validateEmail(event) {
     } else {
         emailInput.classList.remove("valid-input");
         emailInput.classList.add("invalid-input");
+        showErrorBanner(emailInput, 'Must be valid KdG Email.');
     }
 }
 
@@ -104,8 +103,8 @@ function validateEmail(event) {
  * @param {{target: HTMLElement}} event - The input change event.
  */
 function validateAddress(event) {
-    let addressInput = event.target;
-    let value = addressInput.value.trim();
+    const addressInput = event.target;
+    const value = addressInput.value.trim();
 
     if (value.length > 0) {
         addressInput.classList.add("valid-input");
@@ -113,6 +112,7 @@ function validateAddress(event) {
     } else {
         addressInput.classList.remove("valid-input");
         addressInput.classList.add("invalid-input");
+        showErrorBanner(addressInput, 'Please enter a valid address.');
     }
 }
 
@@ -121,8 +121,9 @@ function validateAddress(event) {
  * @param {{target: HTMLElement}} event - The input change event.
  */
 function validateCity(event) {
-    let cityInput = event.target;
-    let value = cityInput.value.trim();
+
+    const cityInput = event.target;
+    const value = cityInput.value.trim();
 
     if (value.length > 0) {
         cityInput.classList.add("valid-input");
@@ -130,6 +131,7 @@ function validateCity(event) {
     } else {
         cityInput.classList.remove("valid-input");
         cityInput.classList.add("invalid-input");
+        showErrorBanner(cityInput, 'Please enter a valid city.');
     }
 }
 
@@ -139,8 +141,8 @@ function validateCity(event) {
  */
 function validateState(event) {
 
-    let stateInput = event.target;
-    let value = stateInput.value.trim();
+    const stateInput = event.target;
+    const value = stateInput.value.trim();
 
     if (value.length > 0) {
         stateInput.classList.add("valid-input");
@@ -148,6 +150,7 @@ function validateState(event) {
     } else {
         stateInput.classList.remove("valid-input");
         stateInput.classList.add("invalid-input");
+        showErrorBanner(stateInput, 'Please enter a valid state.');
     }
 }
 
@@ -156,9 +159,10 @@ function validateState(event) {
  * @param {{target: HTMLElement}} event - The input change event.
  */
 function validateZip(event) {
-    let zipInput = event.target;
-    let value = zipInput.value.trim();
-    let pattern = /^\d{4}$/;
+
+    const zipInput = event.target;
+    const value = zipInput.value.trim();
+    const pattern = /^\d{4}$/;
 
     if (value.length > 0 && pattern.test(value)) {
         zipInput.classList.add("valid-input");
@@ -166,20 +170,24 @@ function validateZip(event) {
     } else {
         zipInput.classList.remove("valid-input");
         zipInput.classList.add("invalid-input");
+        showErrorBanner(zipInput, 'Please enter a valid postal code.');
     }
 }
-
 
 /**
  * Validates the billing period select field.
  */
 function validateBillingPeriod() {
-    let billingPeriodSelect = document.getElementById("billing-period");
+
+    const billingPeriodSelect = document.getElementById("billing-period");
 
     if (billingPeriodSelect.value !== "") {
         billingPeriodSelect.classList.add("valid-input");
+        billingPeriodSelect.classList.remove("invalid-input");
     } else {
         billingPeriodSelect.classList.remove("valid-input");
+        billingPeriodSelect.classList.add("invalid-input");
+        showErrorBanner(billingPeriodSelect, 'Please enter a valid billing period.');
     }
 }
 
@@ -187,12 +195,16 @@ function validateBillingPeriod() {
  * Validates the player slots input field.
  */
 function validatePlayerSlots() {
-    let playerSlotsInput = document.getElementById("player-slots");
+
+    const playerSlotsInput = document.getElementById("player-slots");
 
     if (playerSlotsInput.value >= 1 && playerSlotsInput.value <= 100) {
         playerSlotsInput.classList.add("valid-input");
+        playerSlotsInput.classList.remove("invalid-input");
     } else {
         playerSlotsInput.classList.remove("valid-input");
+        playerSlotsInput.classList.add("invalid-input");
+        showErrorBanner(playerSlotsInput, 'Please choosep player slots.');
     }
 }
 
@@ -200,12 +212,16 @@ function validatePlayerSlots() {
  * Validates the server name input field.
  */
 function validateServerName() {
-    let serverNameInput = document.getElementById("server-name");
+
+    const serverNameInput = document.getElementById("server-name");
 
     if (serverNameInput.value.trim().length > 0) {
         serverNameInput.classList.add("valid-input");
+        serverNameInput.classList.remove("invalid-input");
     } else {
         serverNameInput.classList.remove("valid-input");
+        serverNameInput.classList.add("invalid-input");
+        showErrorBanner(serverNameInput, 'Please enter a valid server name.');
     }
 }
 
@@ -213,14 +229,40 @@ function validateServerName() {
  * Validates the server password input field.
  */
 function validateServerPassword() {
-    let serverPasswordInput = document.getElementById("server-password");
+
+    const serverPasswordInput = document.getElementById("server-password");
 
     if (serverPasswordInput.value.length >= 8) {
         serverPasswordInput.classList.add("valid-input");
+        serverPasswordInput.classList.remove("invalid-input");
     } else {
         serverPasswordInput.classList.remove("valid-input");
+        serverPasswordInput.classList.add("invalid-input");
+        showErrorBanner(serverPasswordInput, 'Please enter a valid server password.');
     }
 }
+
+/**
+ * Shows the error message based on input validity
+ * @param inputElement
+ * @param errorMessage
+ */
+function showErrorBanner(inputElement, errorMessage) {
+    const errorSpan = inputElement.nextElementSibling;
+    errorSpan.textContent = errorMessage;
+    errorSpan.style.display = 'block';
+}
+
+/**
+ * Updates the RAM output text based on the selected RAM value.
+ */
+function updateRamOutput() {
+    const ramInput = document.getElementById('ram');
+    const ramOutput = document.getElementById('ram-output');
+    ramOutput.textContent = ramInput.value + 'GB';
+}
+
+    
 
 
 
