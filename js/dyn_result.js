@@ -7,11 +7,8 @@ window.addEventListener("load", createProductFiche)
 function createProductFiche() {
 
     // Get the selected product from the URL parameters
-    let searchParams = new URLSearchParams(window.location.search);
-    let selectedProduct = searchParams.get('product-selection');
-
-    // Find the container element to append the product fiche
-    let container = document.getElementById('main');
+    const searchParams = new URLSearchParams(window.location.search);
+    const selectedProduct = searchParams.get('product-selection');
 
     // Iterate over the categories and products to find the selected product
     for (let category of categories) {

@@ -8,7 +8,7 @@ window.addEventListener("load", init)
 function init() {
 
     // Get the element with id "product-selection"
-    let element = document.getElementById("product-selection")
+    const element = document.getElementById("product-selection")
 
     // Iterate through each category in the "categories" array
     for (let x of categories) {

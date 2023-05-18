@@ -6,23 +6,23 @@ window.addEventListener("load", init);
  */
 function init() {
 
-    let searchParams = new URLSearchParams(window.location.search);
+    const searchParams = new URLSearchParams(window.location.search);
 
-    let name = searchParams.get("name");
-    let email = searchParams.get("email");
-    let phone = searchParams.get("phone");
-    let address = searchParams.get("address");
-    let zip = searchParams.get("zip");
-    let city = searchParams.get("city");
-    let state = searchParams.get("state");
-    let selectedPackage = searchParams.get("product-selection");
-    let billingPeriod = searchParams.get("billing-period");
-    let playerSlots = searchParams.get("player-slots");
-    let serverLocation = searchParams.get("server-location");
-    let ram = searchParams.get("ram");
-    let serverName = searchParams.get("server-name");
-    let serverPassword = searchParams.get("server-password");
-    let serverMotd = searchParams.get("server-motd");
+    const name = searchParams.get("name");
+    const email = searchParams.get("email");
+    const phone = searchParams.get("phone");
+    const address = searchParams.get("address");
+    const zip = searchParams.get("zip");
+    const city = searchParams.get("city");
+    const state = searchParams.get("state");
+    const selectedPackage = searchParams.get("product-selection");
+    const billingPeriod = searchParams.get("billing-period");
+    const playerSlots = searchParams.get("player-slots");
+    const serverLocation = searchParams.get("server-location");
+    const ram = searchParams.get("ram");
+    const serverName = searchParams.get("server-name");
+    const serverPassword = searchParams.get("server-password");
+    const serverMotd = searchParams.get("server-motd");
 
     updateElement("name", `${name}`);
     updateElement("email", email);
