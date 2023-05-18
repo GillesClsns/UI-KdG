@@ -8,7 +8,8 @@ function init() {
 
     const searchParams = new URLSearchParams(window.location.search);
 
-    const name = searchParams.get("name");
+    const firstName = searchParams.get("first-name");
+    const lastName = searchParams.get("last-name");
     const email = searchParams.get("email");
     const phone = searchParams.get("phone");
     const address = searchParams.get("address");
@@ -24,7 +25,8 @@ function init() {
     const serverPassword = searchParams.get("server-password");
     const serverMotd = searchParams.get("server-motd");
 
-    updateElement("name", `${name}`);
+    updateElement("first-name", `${firstName}`);
+    updateElement("last-name", `${lastName}`);
     updateElement("email", email);
     updateElement("phone", phone);
     updateElement("address", `${address}, ${zip} ${city}, ${state}`);

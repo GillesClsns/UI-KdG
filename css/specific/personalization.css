@@ -61,7 +61,9 @@ input[type="email"],
 input[type="tel"],
 input[type="password"],
 input[type="number"],
-select {
+select,
+option,
+textarea {
     color: black;
     padding: 5px;
     border: 1px solid #ccc;

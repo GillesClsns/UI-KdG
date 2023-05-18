@@ -9,29 +9,33 @@ function init() {
     const form = document.getElementById("form");
 
     form.addEventListener("submit", formSubmit);
-    addInputEventListener("name", validateName);
-    addInputEventListener("email", validateEmail);
-    addInputEventListener("address", validateAddress);
-    addInputEventListener("city", validateCity);
-    addInputEventListener("state", validateState);
-    addInputEventListener("zip", validateZip);
-    addInputEventListener("billing-period", validateBillingPeriod);
-    addInputEventListener("player-slots", validatePlayerSlots);
-    addInputEventListener("server-name", validateServerName);
-    addInputEventListener("server-password", validateServerPassword);
-    addInputEventListener('ram', updateRamOutput);
-
+    addInputEventListener("first-name", validateWhitespace, "change");
+    addInputEventListener("last-name", validateWhitespace, "change");
+    addInputEventListener("email", validateEmail, "input");
+    addInputEventListener("address", validateAddress, "input");
+    addInputEventListener("city", validateCity, "input");
+    addInputEventListener("state", validateState, "input");
+    addInputEventListener("zip", validateZip, "input");
+    addInputEventListener("billing-period", validateBillingPeriod, "input");
+    addInputEventListener("player-slots", validatePlayerSlots, "input");
+    addInputEventListener("server-name", validateServerName, "input");
+    addInputEventListener("server-password", validateServerPassword, "input");
+    addInputEventListener('ram', updateRamOutput, "input");
 }
+
 
 /**
  * Adds an input event listener to the specified input element.
  * @param {string} elementId - The ID of the input element.
  * @param {Function} validationFunction - The validation function to be called on input.
+ * @param {string} type - The event type (e.g., "change").
  */
-function addInputEventListener(elementId, validationFunction) {
+function addInputEventListener(elementId, validationFunction, type) {
+
     const inputElement = document.getElementById(elementId);
-    inputElement.addEventListener("input", (event) => {
-        validationFunction(event);
+
+    inputElement.addEventListener(type, (event) => {
+        validationFunction(event); // Pass both inputElement and event
     });
 }
 
@@ -43,6 +47,7 @@ function formSubmit(event) {
     const form = event.target;
     const inputs = form.querySelectorAll("input, select");
 
+    // Lambda wannabe or just cool callback function?
     inputs.forEach((input) => {
         const validationFunctionName = input.dataset.validation;
         if (validationFunctionName) {
@@ -59,21 +64,23 @@ function formSubmit(event) {
 
 /**
  * Validates the name input field.
- * @param {{target: HTMLElement}} event - The input change event.
+ * @param inputElement
+ * @param event
  */
-function validateName(event) {
+function validateWhitespace(event) {
 
-    const nameInput = event.target;
-    const value = nameInput.value.trim();
-    const regex = /^\S.*\S$/;
+    let textInput = event.target;
+    let value = textInput.value;
+    const pattern = /^\S*$/gm;
 
-    if (value.length > 0 && regex.test(value)) {
-        nameInput.classList.add("valid-input");
-        nameInput.classList.remove("invalid-input");
+    if (value.length > 0 && pattern.test(value)) {
+        textInput.classList.add("valid-input");
+        textInput.classList.remove("invalid-input");
+        clearErrorBanner(textInput);
     } else {
-        nameInput.classList.remove("valid-input");
-        nameInput.classList.add("invalid-input");
-        showErrorBanner(nameInput, 'Name cannot start and end with whitespace');
+        textInput.classList.remove("valid-input");
+        textInput.classList.add("invalid-input");
+        showErrorBanner(textInput, 'May not have head or tail whitespace.');
     }
 }
 
@@ -86,11 +93,13 @@ function validateEmail(event) {
 
     const emailInput = event.target;
     const value = emailInput.value.trim();
-    const pattern = /^[A-Za-z]+\.[A-Za-z]+@student\.kdg\.be$/;
+    const pattern = /^[A-Za-z]*\.[A-Za-z]*@(student\.)?kdg\.be$/gm;
+
 
     if (value.length > 0 && pattern.test(value)) {
         emailInput.classList.add("valid-input");
         emailInput.classList.remove("invalid-input");
+        clearErrorBanner(emailInput);
     } else {
         emailInput.classList.remove("valid-input");
         emailInput.classList.add("invalid-input");
@@ -109,6 +118,7 @@ function validateAddress(event) {
     if (value.length > 0) {
         addressInput.classList.add("valid-input");
         addressInput.classList.remove("invalid-input");
+        clearErrorBanner(addressInput);
     } else {
         addressInput.classList.remove("valid-input");
         addressInput.classList.add("invalid-input");
@@ -128,6 +138,7 @@ function validateCity(event) {
     if (value.length > 0) {
         cityInput.classList.add("valid-input");
         cityInput.classList.remove("invalid-input");
+        clearErrorBanner(cityInput);
     } else {
         cityInput.classList.remove("valid-input");
         cityInput.classList.add("invalid-input");
@@ -147,6 +158,7 @@ function validateState(event) {
     if (value.length > 0) {
         stateInput.classList.add("valid-input");
         stateInput.classList.remove("invalid-input");
+        clearErrorBanner(stateInput);
     } else {
         stateInput.classList.remove("valid-input");
         stateInput.classList.add("invalid-input");
@@ -167,6 +179,7 @@ function validateZip(event) {
     if (value.length > 0 && pattern.test(value)) {
         zipInput.classList.add("valid-input");
         zipInput.classList.remove("invalid-input");
+        clearErrorBanner(zipInput);
     } else {
         zipInput.classList.remove("valid-input");
         zipInput.classList.add("invalid-input");
@@ -184,6 +197,7 @@ function validateBillingPeriod() {
     if (billingPeriodSelect.value !== "") {
         billingPeriodSelect.classList.add("valid-input");
         billingPeriodSelect.classList.remove("invalid-input");
+        clearErrorBanner(billingPeriodSelect);
     } else {
         billingPeriodSelect.classList.remove("valid-input");
         billingPeriodSelect.classList.add("invalid-input");
@@ -201,6 +215,7 @@ function validatePlayerSlots() {
     if (playerSlotsInput.value >= 1 && playerSlotsInput.value <= 100) {
         playerSlotsInput.classList.add("valid-input");
         playerSlotsInput.classList.remove("invalid-input");
+        clearErrorBanner(playerSlotsInput);
     } else {
         playerSlotsInput.classList.remove("valid-input");
         playerSlotsInput.classList.add("invalid-input");
@@ -218,6 +233,7 @@ function validateServerName() {
     if (serverNameInput.value.trim().length > 0) {
         serverNameInput.classList.add("valid-input");
         serverNameInput.classList.remove("invalid-input");
+        clearErrorBanner(serverNameInput);
     } else {
         serverNameInput.classList.remove("valid-input");
         serverNameInput.classList.add("invalid-input");
@@ -235,6 +251,7 @@ function validateServerPassword() {
     if (serverPasswordInput.value.length >= 8) {
         serverPasswordInput.classList.add("valid-input");
         serverPasswordInput.classList.remove("invalid-input");
+        clearErrorBanner(serverPasswordInput);
     } else {
         serverPasswordInput.classList.remove("valid-input");
         serverPasswordInput.classList.add("invalid-input");
@@ -251,6 +268,16 @@ function showErrorBanner(inputElement, errorMessage) {
     const errorSpan = inputElement.nextElementSibling;
     errorSpan.textContent = errorMessage;
     errorSpan.style.display = 'block';
+}
+
+/**
+ * Removes the error mesage based on input validity
+ * @param inputElement
+ */
+function clearErrorBanner(inputElement) {
+    const errorSpan = inputElement.nextElementSibling;
+    errorSpan.textContent = "";
+    errorSpan.style.display = "block"
 }
 
 /**
