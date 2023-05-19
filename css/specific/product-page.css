@@ -1,23 +1,20 @@
-/* || General Styles */
 body {
-    background: #071B24 url("../../../gilles.claessens/media/visuals/product-page-hero.jpg") no-repeat;
-    background-size: contain;
+    background: #071B24 url(../../../gilles.claessens/media/visuals/product-page-hero.jpg) no-repeat;
+    background-size: contain
 }
 
 main h2, .filter-section aside {
     margin-left: 50px;
-    padding-top: 20px;
+    padding-top: 20px
 }
 
-/* || Hero Section */
 .hero-section {
-    height: 950px;
+    height: 950px
 }
 
 .hero-section article {
     width: 30vw;
-    padding-left: 40px;
-
+    padding-left: 40px
 }
 
 .hero-section h3 {
@@ -27,13 +24,13 @@ main h2, .filter-section aside {
     font-weight: 700;
     background-image: linear-gradient(to right, #F8BC24, #F58800);
     -webkit-background-clip: text;
-    color: transparent;
+    color: transparent
 }
 
 .hero-section h4 {
     font-size: 52px;
     font-weight: 700;
-    margin: 0;
+    margin: 0
 }
 
 .hero-section #hero-button {
@@ -45,32 +42,24 @@ main h2, .filter-section aside {
     cursor: pointer;
     background-image: linear-gradient(to right, #F8BC24, #F58800);
     margin-right: 20px;
-    border: none;
-
-}
-
-/* || Filter */
-main section {
-    /*padding: 20px 0 20px 0;*/
+    border: none
 }
 
 form {
     display: flex;
     flex-direction: row;
-    align-self: end;
+    align-self: end
 }
 
 select {
     padding: 5px;
     border-radius: 10px;
-    color: #071B24;
+    color: #071B24
 }
 
 option {
-    color: #071B24;
+    color: #071B24
 }
-
-/* || Product Archive */
 
 .product-list {
     margin-left: 50px;
@@ -79,54 +68,50 @@ option {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 20px
 }
 
 .product-list li {
     max-width: 25%;
-    text-align: center;
+    text-align: center
 }
 
-
-/* FEATURED GAMES SECTION */
 .top-games-section {
     height: 30vw;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-            "head head head"
-            "game1 game2 game3";
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-areas:"head head head" "game1 game2 game3";
     justify-content: center;
     align-content: center;
     text-align: center;
-    background-color: #08212C;
+    background-color: #08212C
 }
 
 #game-1 {
-    grid-area: game1;
+    grid-area: game1
 }
 
 #game-2 {
-    grid-area: game2;
+    grid-area: game2
 }
 
 #game-3 {
-    grid-area: game3;
+    grid-area: game3
 }
 
 .top-games-section h2 {
-    padding: 0 0 30px 0;
-    grid-area: head;
+    padding: 0 0 30px;
+    grid-area: head
 }
 
 .top-games {
     display: flex;
-    justify-content: center;
+    justify-content: center
 }
 
 .container {
     width: 15vw;
-    position: relative;
+    position: relative
 }
 
 .image {
@@ -134,7 +119,7 @@ option {
     width: 100%;
     height: auto;
     transition: .5s ease;
-    backface-visibility: hidden;
+    backface-visibility: hidden
 }
 
 .middle {
@@ -145,80 +130,69 @@ option {
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    text-align: center;
+    text-align: center
 }
 
 .container:hover .image {
-    opacity: 0.3;
+    opacity: .3
 }
 
 .container:hover .middle {
-    opacity: 1;
+    opacity: 1
 }
 
 .text {
     background-color: transparent;
-    color: white;
+    color: #fff;
     font-size: 16px;
-    padding: 16px 32px;
+    padding: 16px 32px
 }
 
 .filter-section aside label {
-    margin-right: 30px;
+    margin-right: 30px
 }
 
 .product-list li, input[type="checkbox"] {
-    display: none;
+    display: none
 }
 
-input#chkPrice5:checked ~ section ul.product-list li.price-five,
-input#chkPrice8:checked ~ section ul.product-list li.price-eight,
-input#chkPrice10:checked ~ section ul.product-list li.price-ten,
-input#chkPrice12:checked ~ section ul.product-list li.price-twelf,
-input#chkPrice15:checked ~ section ul.product-list li.price-fifteen,
-input#chkPrice18:checked ~ section ul.product-list li.price-eighteen,
-input#chkPrice25:checked ~ section ul.product-list li.price-twentyfive,
-input#chkPriceDepends:checked ~ section ul.product-list li.price-depends {
-    display: initial;
+input#chkPrice5:checked ~ section ul.product-list li.price-five, input#chkPrice8:checked ~ section ul.product-list li.price-eight, input#chkPrice10:checked ~ section ul.product-list li.price-ten, input#chkPrice12:checked ~ section ul.product-list li.price-twelf, input#chkPrice15:checked ~ section ul.product-list li.price-fifteen, input#chkPrice18:checked ~ section ul.product-list li.price-eighteen, input#chkPrice25:checked ~ section ul.product-list li.price-twentyfive, input#chkPriceDepends:checked ~ section ul.product-list li.price-depends {
+    display: initial
 }
 
-input#chkPrice5 ~ .filter-section aside label[for="chkPrice5"]::before,
-input#chkPrice8 ~ .filter-section aside label[for="chkPrice8"]::before,
-input#chkPrice10 ~ .filter-section label[for="chkPrice10"]::before,
-input#chkPrice12 ~ .filter-section aside label[for="chkPrice12"]::before,
-input#chkPrice15 ~ .filter-section aside label[for="chkPrice15"]::before,
-input#chkPrice18 ~ .filter-section aside label[for="chkPrice18"]::before,
-input#chkPrice25 ~ .filter-section aside label[for="chkPrice25"]::before,
-input#chkPriceDepends ~ .filter-section aside label[for="chkPriceDepends"]::before {
-    content: '\2610';
+input#chkPrice5 ~ .filter-section aside label[for="chkPrice5"]::before, input#chkPrice8 ~ .filter-section aside label[for="chkPrice8"]::before, input#chkPrice10 ~ .filter-section label[for="chkPrice10"]::before, input#chkPrice12 ~ .filter-section aside label[for="chkPrice12"]::before, input#chkPrice15 ~ .filter-section aside label[for="chkPrice15"]::before, input#chkPrice18 ~ .filter-section aside label[for="chkPrice18"]::before, input#chkPrice25 ~ .filter-section aside label[for="chkPrice25"]::before, input#chkPriceDepends ~ .filter-section aside label[for="chkPriceDepends"]::before {
+    content: '\2610'
 }
 
-input#chkPrice5:checked ~ .filter-section aside label[for="chkPrice5"]::before,
-input#chkPrice8:checked ~ .filter-section aside label[for="chkPrice8"]::before,
-input#chkPrice10:checked ~ .filter-section aside label[for="chkPrice10"]::before,
-input#chkPrice12:checked ~ .filter-section aside label[for="chkPrice12"]::before,
-input#chkPrice15:checked ~ .filter-section aside label[for="chkPrice15"]::before,
-input#chkPrice18:checked ~ .filter-section aside label[for="chkPrice18"]::before,
-input#chkPrice25:checked ~ .filter-section aside label[for="chkPrice25"]::before,
-input#chkPriceDepends:checked ~ .filter-section aside label[for="chkPriceDepends"]::before {
-    content: '\2612';
+input#chkPrice5:checked ~ .filter-section aside label[for="chkPrice5"]::before, input#chkPrice8:checked ~ .filter-section aside label[for="chkPrice8"]::before, input#chkPrice10:checked ~ .filter-section aside label[for="chkPrice10"]::before, input#chkPrice12:checked ~ .filter-section aside label[for="chkPrice12"]::before, input#chkPrice15:checked ~ .filter-section aside label[for="chkPrice15"]::before, input#chkPrice18:checked ~ .filter-section aside label[for="chkPrice18"]::before, input#chkPrice25:checked ~ .filter-section aside label[for="chkPrice25"]::before, input#chkPriceDepends:checked ~ .filter-section aside label[for="chkPriceDepends"]::before {
+    content: '\2612'
 }
 
 input {
-    color: black;
+    color: #000
 }
 
 #lbl-name, select {
-    margin-left: 50px;
+    margin-left: 50px
 }
 
-#filter-button {
-    background-image: linear-gradient(to right, #F8BC24, #F58800);
+input[type=number], input[type=text] {
+    width: 7%;
+    color: #000;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 10px
+}
+
+#filter-button, li > button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 7px 10px;
+    border-radius: 5px;
     border: none;
-    font-size: 16px;
-    height: 35px;
-    width: 125px;
-    border-radius: 10px;
-    cursor: pointer;
+    cursor: pointer
 }
 
+#filter-button:hover {
+    background-color: #45a049
+}

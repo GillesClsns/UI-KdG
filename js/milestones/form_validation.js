@@ -5,24 +5,36 @@ window.addEventListener("load", init);
  * Initializes the form by adding event listeners to the relevant input elements.
  */
 function init() {
-
     const form = document.getElementById("form");
-
     form.addEventListener("submit", formSubmit);
-    addInputEventListener("first-name", validateWhitespace, "change");
-    addInputEventListener("last-name", validateWhitespace, "change");
-    addInputEventListener("email", validateEmail, "input");
-    addInputEventListener("address", validateAddress, "input");
-    addInputEventListener("city", validateCity, "input");
-    addInputEventListener("state", validateState, "input");
-    addInputEventListener("zip", validateZip, "input");
-    addInputEventListener("billing-period", validateBillingPeriod, "input");
-    addInputEventListener("player-slots", validatePlayerSlots, "input");
-    addInputEventListener("server-name", validateServerName, "input");
-    addInputEventListener("server-password", validateServerPassword, "input");
-    addInputEventListener('ram', updateRamOutput, "input");
-}
 
+    const inputElements = [
+        {id: "first-name", validation: validateWhitespace, event: "change"},
+        {id: "last-name", validation: validateWhitespace, event: "change"},
+        {id: "email", validation: validateEmail, event: "input"},
+        {id: "phone", validation: validatePhoneNumber, event: "input"},
+        {id: "address", validation: validateAddress, event: "input"},
+        {id: "city", validation: validateCity, event: "input"},
+        {id: "state", validation: validateState, event: "input"},
+        {id: "zip", validation: validateZip, event: "input"},
+        {id: "billing-period", validation: validateBillingPeriod, event: "input"},
+        {id: "player-slots", validation: validatePlayerSlots, event: "input"},
+        {id: "server-name", validation: validateServerName, event: "input"},
+        {id: "server-password", validation: validateServerPassword, event: "input"},
+        {id: "ram", validation: updateRamOutput, event: "input"},
+    ];
+
+    inputElements.forEach((inputElement) => {
+        const {id, validation, event} = inputElement;
+        addInputEventListener(id, validation, event);
+
+        // Validate each input field on page load
+        const element = document.getElementById(id);
+        if (validation && element) {
+            validation({target: element});
+        }
+    });
+}
 
 /**
  * Adds an input event listener to the specified input element.
@@ -31,12 +43,13 @@ function init() {
  * @param {string} type - The event type (e.g., "change").
  */
 function addInputEventListener(elementId, validationFunction, type) {
-
     const inputElement = document.getElementById(elementId);
 
-    inputElement.addEventListener(type, (event) => {
-        validationFunction(event); // Pass both inputElement and event
-    });
+    if (inputElement) {
+        inputElement.addEventListener(type, (event) => {
+            validationFunction(event); // Pass both inputElement and event
+        });
+    }
 }
 
 /**
@@ -104,6 +117,26 @@ function validateEmail(event) {
         emailInput.classList.remove("valid-input");
         emailInput.classList.add("invalid-input");
         showErrorBanner(emailInput, 'Must be valid KdG Email.');
+    }
+}
+
+/**
+ * Validates the phone number input field.
+ * @param {{target: HTMLElement}} event - The input change event.
+ */
+function validatePhoneNumber(event) {
+    const phoneInput = event.target;
+    const value = phoneInput.value.trim();
+    const pattern = /^\d{10}$/; // Assumes a 10-digit phone number format
+
+    if (value.length > 0 && pattern.test(value)) {
+        phoneInput.classList.add("valid-input");
+        phoneInput.classList.remove("invalid-input");
+        clearErrorBanner(phoneInput);
+    } else {
+        phoneInput.classList.remove("valid-input");
+        phoneInput.classList.add("invalid-input");
+        showErrorBanner(phoneInput, 'Please enter a valid phone number (10 digits).');
     }
 }
 
@@ -288,8 +321,3 @@ function updateRamOutput() {
     const ramOutput = document.getElementById('ram-output');
     ramOutput.textContent = ramInput.value + 'GB';
 }
-
-    
-
-
-
