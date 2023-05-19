@@ -5,39 +5,38 @@ body {
 
 .info-list {
     display: grid;
-    grid-template-columns: 10vw auto;
-    grid-gap: 10px;
+    grid-template-columns:10vw auto;
+    grid-gap: 10px
 }
 
 #personal-information {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
-    background-color: #071B24;
+    background-color: #071B24
 }
 
 #personal-information, #order-confirmation, #product-fiche {
     padding: 10px;
     width: 70%;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
 #product-fiche {
     display: grid;
     gap: 25px;
-    grid-template-areas: "info img";
+    grid-template-areas:"info img";
     justify-items: center;
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 #product-information {
     grid-area: info;
     display: flex;
-    flex-direction: column;
-
+    flex-direction: column
 }
 
 .product-list {
     width: 50%;
     grid-area: img;
     text-align: center;
-    list-style: none;
+    list-style: none
 }

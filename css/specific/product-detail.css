@@ -1,18 +1,15 @@
-/* || General Styles */
 body {
-    background: #071B24;
+    background: #071B24
 }
 
-/* || Broodkruimmeltje */
 .mmhm-broodkruimmeltje {
-    margin-left: 50px;
-
+    margin-left: 50px
 }
 
 .mmhm-broodkruimmeltje li a {
     grid-area: breadcrumb;
     text-decoration: none;
-    margin: 15px;
+    margin: 15px
 }
 
 .mmhm-broodkruimmeltje ol {
@@ -21,79 +18,72 @@ body {
     display: flex;
     list-style-type: "/";
     border: 1px #4E4E4E solid;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
 }
 
 .mmhm-broodkruimmeltje li:first-child {
-    list-style: none;
+    list-style: none
 }
 
-.mmhm-broodkruimmeltje li:last-child a { /* Changes the color of the last element to show the current page */
-    color: grey;
+.mmhm-broodkruimmeltje li:last-child a {
+    color: grey
 }
 
-/* || Product Overview */
 .product {
     height: 40vw;
     justify-content: center;
     align-content: center;
     background-color: #08212C;
     display: grid;
-    grid-template-areas:
-            "image head"
-            "image description"
-            "image properties";
+    grid-template-areas:"image head" "image description" "image properties"
 }
 
 .product-image {
     grid-area: image;
-    margin-left: 50px;
+    margin-left: 50px
 }
 
 .product-header {
     grid-area: head;
-    align-self: flex-end;
+    align-self: flex-end
 }
 
 .product-description {
     grid-area: description;
     margin-top: 20px;
-    max-width: 50vw;
+    max-width: 50vw
 }
 
 .product-properties {
     grid-area: properties;
     margin-top: 20px;
-    margin-left: 0;
+    margin-left: 0
 }
 
 .product-properties dl {
-    display: flex;
+    display: flex
 }
 
 .product-properties dt {
-    margin-right: 0.5vw;
+    margin-right: .5vw
 }
 
 .product-properties dd {
-    margin: 0 5vw 0 0;
+    margin: 0 5vw 0 0
 }
 
 .cart-button {
-
     font-size: 16px;
     height: 70px;
     width: 175px;
     border-radius: 15px;
     cursor: pointer;
-
     background-image: linear-gradient(to right, #F8BC24, #F58800);
-    border: none;
-
+    border: none
 }
 
 .cart-button:hover {
     background: transparent;
     border: solid #F58800 medium;
-    border-radius: 10px;
+    border-radius: 10px
 }

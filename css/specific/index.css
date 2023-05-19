@@ -1,23 +1,20 @@
-/* || General Styles */
 body {
-    background: #071B24 url("../../media/visuals/hero-background.png") no-repeat; /* Hero section background */
-    background-size: contain;
+    background: #071B24 url(../../media/visuals/hero-background.png) no-repeat;
+    background-size: contain
 }
 
 h3 {
     font-weight: 700;
-    font-size: 42px;
+    font-size: 42px
 }
 
-/* || Hero Section */
 .hero-section {
-    height: 950px;
+    height: 950px
 }
 
 .hero-section article {
     width: 40vw;
-    padding-left: 50px;
-
+    padding-left: 50px
 }
 
 .hero-section button {
@@ -26,7 +23,7 @@ h3 {
     height: 70px;
     width: 255px;
     border-radius: 15px;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .hero-section h3 {
@@ -35,146 +32,132 @@ h3 {
     font-size: 28px;
     font-weight: 700;
     background-image: linear-gradient(to right, #F8BC24, #F58800);
-    -webkit-background-clip: text; /* Required for a working gradient + safari support */
-    color: transparent;
+    -webkit-background-clip: text;
+    color: transparent
 }
 
 .hero-section h4 {
     font-size: 52px;
     font-weight: 700;
-    margin: 0;
+    margin: 0
 }
 
 .hero-section #goto-game {
     background-image: linear-gradient(to right, #F8BC24, #F58800);
     margin-right: 20px;
-    border: none;
-
+    border: none
 }
 
 .hero-section #goto-game:hover {
     background: transparent;
     border: solid #F58800 medium;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .hero-section #goto-all {
     border: solid #F58800 medium;
     background-color: transparent;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .hero-section #goto-all:hover {
-    background-image: linear-gradient(to right, #F8BC24, #F58800);
-
+    background-image: linear-gradient(to right, #F8BC24, #F58800)
 }
 
-/* || About Company */
 .about-company {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns:repeat(auto-fit, minmax(350px, 1fr));
     justify-content: center;
     align-content: center;
-    height: 950px;
+    height: 950px
 }
 
-.about-company article {
-    max-width: 75%;
-}
-
-/* || About Myself */
 .about-myself {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns:repeat(auto-fit, minmax(350px, 1fr));
     align-content: center;
     justify-items: center;
     height: 800px;
-    background-color: #08212C;
+    background-color: #08212C
 }
 
-.about-myself article {
-    max-width: 75%;
-}
-
-/* || Why Us */
 .why-us {
     display: grid;
     text-align: center;
-    background: #071B24 url("../../media/visuals/why-us-vector.png") no-repeat;
+    background: #071B24 url(../../media/visuals/why-us-vector.png) no-repeat;
     background-size: contain;
-    grid-template-columns: 1fr 1fr 1fr; /* Gives each column a static size, which makes it easier to center contents */
-    grid-template-areas:
-            "head head head"
-            "art1 art2 art3";
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-areas:"head head head" "art1 art2 art3"
 }
 
 .why-us-heading {
     grid-area: head;
-    padding: 2vw 0;
+    padding: 2vw 0
 }
 
 .why-us article {
-    padding: 0 5vw 5vw 5vw;
+    padding: 0 5vw 5vw
 }
 
 .why-us article h3 {
-    font-size: 24px;
+    font-size: 24px
 }
 
 .why-us-1 {
-    grid-area: art1;
+    grid-area: art1
 }
 
 .why-us-2 {
-    grid-area: art2;
+    grid-area: art2
 }
 
 .why-us-3 {
-    grid-area: art3;
+    grid-area: art3
 }
 
-/* Testimonials */
 .testimonials {
     background-color: #08212C;
     display: grid;
     text-align: center;
-    grid-template-columns: 1fr 1fr 1fr; /* Gives each column a static size, which makes it easier to center contents */
-    grid-template-areas:
-            "head head head"
-            "test1 test2 test3";
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-areas:"head head head" "test1 test2 test3"
 }
 
 #test-1 {
-    grid-area: test1;
+    grid-area: test1
 }
 
 #test-2 {
-    grid-area: test2;
+    grid-area: test2
 }
 
 #test-3 {
-    grid-area: test3;
+    grid-area: test3
 }
 
 .testimonials-header {
     grid-area: head;
-    padding: 5vw 0;
+    padding: 5vw 0
 }
 
 .testimonials-header img {
-    padding-top: 5vw;
+    padding-top: 5vw
 }
 
 .testimonials article {
     display: flex;
     flex-direction: column;
-    padding: 0 5vw 5vw 5vw;
+    padding: 0 5vw 5vw
 }
 
 .testimonials q {
-    height: 15vw; /* Gives each testimonial the same height so it is spaced evenly */
+    height: 15vw
 }
 
 .testimonials h3, p {
-    margin: 0;
+    margin: 0
+}
+
+.about-company article, .about-myself article {
+    max-width: 75%
 }

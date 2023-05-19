@@ -1,6 +1,5 @@
-/* || General Styles */
 body {
-    background-color: #071B24;
+    background-color: #071B24
 }
 
 main {
@@ -9,14 +8,13 @@ main {
     align-content: center;
     justify-content: center;
     display: grid;
-    grid-template-areas:
-            "map info";
+    grid-template-areas:"map info"
 }
 
 .contact-information {
-    grid-area: info;
+    grid-area: info
 }
 
 .google-maps {
-    grid-area: map;
+    grid-area: map
 }

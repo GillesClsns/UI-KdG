@@ -1,52 +1,22 @@
-/* General Styles */
 body {
-    background-color: #071B24;
+    background-color: #071B24
 }
 
 .faq-section {
     background-color: #08212C;
     padding: 50px;
-    display: block;
+    display: block
 }
 
 summary {
     font-size: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
 
 summary:hover {
-    cursor: pointer;
+    cursor: pointer
 }
 
 summary::marker {
-    color: #F58800;
-}
-
-/* Responsive Styles */
-@media screen and (max-width: 600px) {
-    /* Styles for screens up to 600px wide */
-    .faq-section {
-        padding: 30px;
-    }
-}
-
-@media screen and (min-width: 601px) and (max-width: 900px) {
-    /* Styles for screens between 601px and 900px wide */
-    .faq-section {
-        padding: 40px;
-    }
-}
-
-@media screen and (min-width: 901px) and (max-width: 1200px) {
-    /* Styles for screens between 901px and 1200px wide */
-    .faq-section {
-        padding: 50px;
-    }
-}
-
-@media screen and (min-width: 1201px) {
-    /* Styles for screens above 1200px wide */
-    .faq-section {
-        padding: 60px;
-    }
+    color: #F58800
 }
