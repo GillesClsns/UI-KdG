@@ -19,11 +19,11 @@ body {
 }
 
 .valid-input {
-    background-color: #fff
+    background-color: #4CAF50;
 }
 
 .invalid-input {
-    background-color: #fff
+    background-color: #d32f2f;
 }
 
 .navigation {

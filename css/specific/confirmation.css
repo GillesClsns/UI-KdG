@@ -14,7 +14,7 @@ body {
     background-color: #071B24
 }
 
-#personal-information, #order-confirmation, #product-fiche {
+#personal-information, #order-confirmation, #product-fiche, #delivery-information, #order-products {
     padding: 10px;
     width: 70%;
     margin: 0 auto
@@ -40,3 +40,4 @@ body {
     text-align: center;
     list-style: none
 }
+

@@ -3,15 +3,13 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>Confirmation</title>
+    <title>Cart Confirmation</title>
     <link rel="icon" type="image/x-icon" href="/media/favicon/favicon.png">
     <link rel="stylesheet" href="/css/general/normalize.css">
     <link rel="stylesheet" href="/css/general/site.css">
     <link rel="stylesheet" href="/css/specific/confirmation.css">
 
-    <script src="../js/milestones/dyn_data.js" defer></script>
-    <script src="../js/milestones/form_result.js" defer></script>
-    <script src="../js/milestones/dyn_result.js" defer></script>
+    <script src="../js/extensions/cart/renderConfirmation.js" defer></script>
 
 </head>
 
@@ -52,8 +50,8 @@
             experience. Please review the details of your order below:</p>
     </section>
 
-    <section id="personal-information">
-        <h2>Personal Information:</h2>
+    <section id="delivery-information">
+        <h2>Delivery Information:</h2>
         <dl class="info-list">
             <dt>First Name:</dt>
             <dd id="first-name"></dd>
@@ -65,33 +63,34 @@
             <dd id="phone"></dd>
             <dt>Address:</dt>
             <dd id="address"></dd>
+            <dt>City:</dt>
+            <dd id="city"></dd>
+            <dt>State:</dt>
+            <dd id="state"></dd>
+            <dt>Zip Code:</dt>
+            <dd id="zip"></dd>
         </dl>
     </section>
 
-    <div id="product-fiche">
-        <section id="product-information">
-            <h2>Product Information:</h2>
-            <dl class="info-list">
-                <dt>Selected Package:</dt>
-                <dd id="product-selection"></dd>
-                <dt>Billing Period:</dt>
-                <dd id="billing-period"></dd>
-                <dt>Player Slots:</dt>
-                <dd id="player-slots"></dd>
-                <dt>Server Location:</dt>
-                <dd id="server-location"></dd>
-                <dt>RAM:</dt>
-                <dd id="ram"></dd>
-                <dt>Server Name:</dt>
-                <dd id="server-name"></dd>
-                <dt>Server Password:</dt>
-                <dd id="server-password"></dd>
-                <dt>Server MOTD:</dt>
-                <dd id="server-motd"></dd>
-            </dl>
-        </section>
-    </div>
-
+    <section id="order-products">
+        <h2>Order Products:</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tbody id="order-products-list"></tbody>
+            <tfoot>
+            <tr>
+                <td colspan="2">Total:</td>
+                <td id="order-total"></td>
+            </tr>
+            </tfoot>
+        </table>
+    </section>
 </main>
 
 <!-- FOOTER -->

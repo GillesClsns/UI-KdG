@@ -3,11 +3,28 @@ window.addEventListener("load", init)
 function init() {
 
     addShoppingFunctionality();
-    storeDeliveryInformation();
+    displayStoredDeliveryInfo();
+
 
 }
 
+function displayStoredDeliveryInfo() {
+    const deliveryInfo = localStorage.getItem('deliveryInfo');
+    if (deliveryInfo) {
+        const parsedInfo = JSON.parse(deliveryInfo);
+        document.getElementById('first-name').value = parsedInfo.firstName;
+        document.getElementById('last-name').value = parsedInfo.lastName;
+        document.getElementById('email').value = parsedInfo.email;
+        document.getElementById('phone').value = parsedInfo.phone;
+        document.getElementById('address').value = parsedInfo.address;
+        document.getElementById('city').value = parsedInfo.city;
+        document.getElementById('state').value = parsedInfo.state;
+        document.getElementById('zip').value = parsedInfo.zip;
+    }
+}
+
 function storeDeliveryInformation() {
+
     const firstName = document.getElementById('first-name').value;
     const lastName = document.getElementById('last-name').value;
     const email = document.getElementById('email').value;
@@ -32,32 +49,33 @@ function storeDeliveryInformation() {
 }
 
 function addShoppingFunctionality() {
-    // Continue Shopping button event handler
+
+    // Continue shopping functionality
     const continueShoppingButton = document.getElementById('continue-shopping');
     continueShoppingButton.addEventListener('click', () => {
-        // Redirect to the Products page
         window.location.href = './product-page.html';
     });
 
-    // Confirm Order button event handler
+    // Confirm order functionality
     const confirmOrderButton = document.getElementById('confirm-order');
     confirmOrderButton.addEventListener('click', () => {
-        // Perform any necessary validation or processing
-
-        // Redirect to the Confirmation page
-        window.location.href = 'confirmation.html';
+        window.location.href = 'cart-confirmation.html';
     });
 
-    // Save Delivery Information button event handler
+    // Save delivery information functionality
     const saveDeliveryButton = document.querySelector('input[type="submit"]');
     saveDeliveryButton.addEventListener('click', () => {
-        // Store delivery information in local storage
-        storeDeliveryInformation();
 
-        alert("Delivery information successfully stored.")
+        const form = document.getElementById('form');
+        if (form.checkValidity()) {
+            storeDeliveryInformation();
+            alert("Delivery information successfully stored.")
 
-        // Clear
-        document.getElementById('form').reset();
+        } else {
+
+            alert("Please fill in all required fields correctly.");
+
+        }
     });
 }
 
