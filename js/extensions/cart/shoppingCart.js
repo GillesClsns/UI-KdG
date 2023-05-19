@@ -19,7 +19,7 @@ export function addToCart(productId) {
 
         alert(`${product.name} added to cart!`);
     } else {
-        alert('Product not found!');
+        alert('Product not found!'); // Debug
     }
 }
 

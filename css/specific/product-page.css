@@ -8,6 +8,10 @@ main h2, .filter-section aside {
     padding-top: 20px
 }
 
+#minecraft-section, #ark-section, #rust-section, #valheim-section, #farming-section, #hytale-section {
+    padding-bottom: 20px;
+}
+
 .hero-section {
     height: 950px
 }

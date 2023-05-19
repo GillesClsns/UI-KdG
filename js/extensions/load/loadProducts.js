@@ -1,6 +1,6 @@
-import {applyFilters} from "./applyFilters.js";
+import {applyFilters} from "../filter_sort/applyFilters.js";
 import {loadCategoryProducts} from "./loadCategoryProducts.js";
-import {addSortingOptions} from "./sortingOptions.js";
+import {addSortingOptions} from "../filter_sort/sortingOptions.js";
 
 /**
  * Dynamically loads products for each category on the product page.

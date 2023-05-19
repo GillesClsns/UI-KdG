@@ -1,4 +1,4 @@
-import {loadCategoryProducts} from "./loadCategoryProducts.js";
+import {loadCategoryProducts} from "../load/loadCategoryProducts.js";
 
 /**
  * Applies filters and sorting to the products based on the selected options.
