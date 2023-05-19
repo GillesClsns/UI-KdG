@@ -11,9 +11,9 @@ export function applyFilters() {
     const minPrice = parseFloat(minPriceFilter.value);
     const maxPrice = parseFloat(maxPriceFilter.value);
 
-    // Iterate over the categories
+    // Iterate
     for (let category of categories) {
-        // Get the corresponding category section
+        // Get the correct category section
         const categorySection = document.getElementById(`${category.catName.toLowerCase()}-section`);
         if (categorySection) {
             // Get the product list within the category section
