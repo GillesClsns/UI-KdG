@@ -208,7 +208,7 @@ input {
     color: black;
 }
 
-#lbl-name {
+#lbl-name, select {
     margin-left: 50px;
 }
 

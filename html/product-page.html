@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/general/site.css">
     <link rel="stylesheet" href="/css/specific/product-page.css">
     <script src="../js/dyn_data.js" defer></script>
-    <script src="../js/dyn_load.js" defer></script>
+    <script src="../js/dyn_load_filter_sort.js" defer></script>
 
 </head>
 
@@ -131,7 +131,7 @@
 
 
     <section class="a2-filter">
-        <h2>Filter | Sorting</h2>
+        <h2>Filter</h2>
         <!-- Name filter -->
         <label for="name-filter" id="lbl-name">Name:</label>
         <input type="text" id="name-filter" placeholder="Minecraft">
@@ -139,7 +139,7 @@
         <label for="min-price-filter">Min Price:</label>
         <input type="number" id="min-price-filter" value="0">
         <label for="max-price-filter">Max Price:</label>
-        <input type="number" id="max-price-filter" value="0">
+        <input type="number" id="max-price-filter" value="100">
         <button id="filter-button">Filter</button>
     </section>
 
