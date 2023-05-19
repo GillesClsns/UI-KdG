@@ -4,7 +4,8 @@
 const catMinecraft = [
     {
         name: 'Minecraft [Wood]',
-        price: '€5 p.m.',
+        price: '5',
+        css_class: 'five',
         link: "minecraft-packages/minecraft-wood.html",
         image: '../media/thumbnails/minecraft-small.jpg',
         alt: 'Minecraft Thumbnail',
@@ -13,7 +14,8 @@ const catMinecraft = [
     },
     {
         name: 'Minecraft [Stone]',
-        price: '€8 p.m.',
+        price: '8',
+        css_class: 'eight',
         link: "minecraft-packages/minecraft-stone.html",
         image: '../media/thumbnails/minecraft-small.jpg',
         alt: 'Minecraft Thumbnail',
@@ -22,7 +24,8 @@ const catMinecraft = [
     },
     {
         name: 'Minecraft [Iron]',
-        price: '€10 p.m.',
+        price: '10',
+        css_class: 'ten',
         link: "minecraft-packages/minecraft-iron.html",
         image: '../media/thumbnails/minecraft-small.jpg',
         alt: 'Minecraft Thumbnail',
@@ -31,7 +34,8 @@ const catMinecraft = [
     },
     {
         name: 'Minecraft [Gold]',
-        price: '€12 p.m.',
+        price: '12',
+        css_class: 'twelf',
         image: '../media/thumbnails/minecraft-small.jpg',
         alt: 'Minecraft Thumbnail',
         category: 'Minecraft',
@@ -39,7 +43,8 @@ const catMinecraft = [
     },
     {
         name: 'Minecraft [Diamond]',
-        price: '€15 p.m.',
+        price: '15',
+        css_class: 'fifteen',
         image: '../media/thumbnails/minecraft-small.jpg',
         alt: 'Minecraft Thumbnail',
         category: 'Minecraft',
@@ -47,7 +52,8 @@ const catMinecraft = [
     },
     {
         name: 'Minecraft [Netherite]',
-        price: '€25 p.m.',
+        price: '25',
+        css_class: 'twentyfive',
         image: '../media/thumbnails/minecraft-small.jpg',
         alt: 'Minecraft Thumbnail',
         category: 'Minecraft',
@@ -55,7 +61,8 @@ const catMinecraft = [
     },
     {
         name: 'Minecraft [Custom]',
-        price: 'Price Depends',
+        price: '0',
+        css_class: 'depends',
         image: '../media/thumbnails/minecraft-small.jpg',
         alt: 'Minecraft Thumbnail',
         category: 'Minecraft',
@@ -69,7 +76,8 @@ const catMinecraft = [
 const catRust = [
     {
         name: 'Rust [Beginner]',
-        price: '€5 p.m.',
+        price: '5',
+        css_class: 'five',
         image: '../media/thumbnails/rust-small.jpeg',
         alt: 'Rust Thumbnail',
         category: 'Rust',
@@ -77,7 +85,8 @@ const catRust = [
     },
     {
         name: 'Rust [Advanced]',
-        price: '€8 p.m.',
+        price: '8',
+        css_class: 'eight',
         image: '../media/thumbnails/rust-small.jpeg',
         alt: 'Rust Thumbnail',
         category: 'Rust',
@@ -85,7 +94,8 @@ const catRust = [
     },
     {
         name: 'Rust [Professional]',
-        price: '€18 p.m.',
+        price: '18',
+        css_class: 'eighteen',
         image: '../media/thumbnails/rust-small.jpeg',
         alt: 'Rust Thumbnail',
         category: 'Rust',
@@ -93,7 +103,8 @@ const catRust = [
     },
     {
         name: 'Rust [Custom]',
-        price: 'Price Depends',
+        price: '0',
+        css_class: 'depends',
         image: '../media/thumbnails/rust-small.jpeg',
         alt: 'Rust Thumbnail',
         category: 'Rust',
@@ -107,7 +118,8 @@ const catRust = [
 const catArkSurvival = [
     {
         name: 'ARK Survival [Beginner]',
-        price: '€5 p.m.',
+        price: '5',
+        css_class: 'five',
         image: '../media/thumbnails/ark-survival-small.jpeg',
         alt: 'Ark Survival Thumbnail',
         category: 'ARK Survival',
@@ -115,7 +127,8 @@ const catArkSurvival = [
     },
     {
         name: 'ARK Survival [Advanced]',
-        price: '€8 p.m.',
+        price: '8',
+        css_class: 'eight',
         image: '../media/thumbnails/ark-survival-small.jpeg',
         alt: 'Ark Survival Thumbnail',
         category: 'ARK Survival',
@@ -123,7 +136,8 @@ const catArkSurvival = [
     },
     {
         name: 'ARK Survival [Professional]',
-        price: '€18 p.m.',
+        price: '18',
+        css_class: 'eighteen',
         image: '../media/thumbnails/ark-survival-small.jpeg',
         alt: 'Ark Survival Thumbnail',
         category: 'ARK Survival',
@@ -131,7 +145,8 @@ const catArkSurvival = [
     },
     {
         name: 'ARK Survival [Custom]',
-        price: 'Price Depends',
+        price: '0',
+        css_class: 'depends',
         image: '../media/thumbnails/ark-survival-small.jpeg',
         alt: 'Ark Survival Thumbnail',
         category: 'ARK Survival',
@@ -145,7 +160,8 @@ const catArkSurvival = [
 const catValheim = [
     {
         name: 'Valheim [Beginner]',
-        price: '€5 p.m.',
+        price: '5',
+        css_class: 'five',
         image: '../media/thumbnails/valheim-small.png',
         alt: 'Valheim Thumbnail',
         category: 'Valheim',
@@ -153,7 +169,8 @@ const catValheim = [
     },
     {
         name: 'Valheim [Advanced]',
-        price: '€8 p.m.',
+        price: '8',
+        css_class: 'eight',
         image: '../media/thumbnails/valheim-small.png',
         alt: 'Valheim Thumbnail',
         category: 'Valheim',
@@ -167,7 +184,8 @@ const catValheim = [
 const catFarmingSimulator = [
     {
         name: 'Farming Simulator [Beginner]',
-        price: '€5 p.m.',
+        price: '5',
+        css_class: 'five',
         image: '../media/thumbnails/farming-simulator-small.jpg',
         alt: 'Farming Simulator Thumbnail',
         category: 'Farming Simulator',
@@ -175,7 +193,8 @@ const catFarmingSimulator = [
     },
     {
         name: 'Farming Simulator [Professional]',
-        price: '€18 p.m.',
+        price: '18',
+        css_class: 'eighteen',
         image: '../media/thumbnails/farming-simulator-small.jpg',
         alt: 'Farming Simulator Thumbnail',
         category: 'Farming Simulator',
@@ -183,7 +202,8 @@ const catFarmingSimulator = [
     },
     {
         name: 'Farming Simulator [Custom]',
-        price: 'Price Depends',
+        price: '0',
+        css_class: 'depends',
         image: '../media/thumbnails/farming-simulator-small.jpg',
         alt: 'Farming Simulator Thumbnail',
         category: 'Farming Simulator',
@@ -197,7 +217,8 @@ const catFarmingSimulator = [
 const catHytale = [
     {
         name: 'Hytale [Beginner]',
-        price: '€5 p.m.',
+        price: '5',
+        css_class: 'five',
         image: '../media/thumbnails/hytale-small.png',
         alt: 'Hytale Thumbnail',
         category: 'Hytale',
@@ -205,7 +226,8 @@ const catHytale = [
     },
     {
         name: 'Hytale [Professional]',
-        price: '€18 p.m.',
+        price: '18',
+        css_class: 'eighteen',
         image: '../media/thumbnails/hytale-small.png',
         alt: 'Hytale Thumbnail',
         category: 'Hytale',
@@ -213,7 +235,8 @@ const catHytale = [
     },
     {
         name: 'Hytale [Custom]',
-        price: 'Price Depends',
+        price: '0',
+        css_class: 'depends',
         image: '../media/thumbnails/hytale-small.png',
         alt: 'Hytale Thumbnail',
         category: 'Hytale',
@@ -234,7 +257,7 @@ const categories = [
         proddata: catRust
     },
     {
-        catName: "Ark Survival: Evolved",
+        catName: "Ark",
         proddata: catArkSurvival
     },
     {
@@ -242,7 +265,7 @@ const categories = [
         proddata: catValheim
     },
     {
-        catName: "Farming Simulator",
+        catName: "Farming",
         proddata: catFarmingSimulator
     },
     {

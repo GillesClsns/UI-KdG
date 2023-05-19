@@ -87,6 +87,7 @@ option {
     text-align: center;
 }
 
+
 /* FEATURED GAMES SECTION */
 .top-games-section {
     height: 30vw;
@@ -202,3 +203,22 @@ input#chkPrice25:checked ~ .filter-section aside label[for="chkPrice25"]::before
 input#chkPriceDepends:checked ~ .filter-section aside label[for="chkPriceDepends"]::before {
     content: '\2612';
 }
+
+input {
+    color: black;
+}
+
+#lbl-name {
+    margin-left: 50px;
+}
+
+#filter-button {
+    background-image: linear-gradient(to right, #F8BC24, #F58800);
+    border: none;
+    font-size: 16px;
+    height: 35px;
+    width: 125px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
