@@ -1,15 +1,11 @@
 body {
-    background: #071B24 url(../../media/visuals/hero-background.png) no-repeat;
+    background: #071B24 none no-repeat;
     background-size: contain
 }
 
 h3 {
     font-weight: 700;
     font-size: 42px
-}
-
-.hero-section {
-    height: 950px
 }
 
 .hero-section article {
@@ -241,16 +237,18 @@ h3 {
 
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 901px) {
 
     body {
-        background: #071B24;
+        background: #071B24 url(../../media/visuals/hero-background.png) no-repeat;
+        background-size: contain
     }
 
     .hero-section {
-        background-color: #08212C;
-        height: fit-content;
+        display: flex;
+        align-items: center;
         padding: 20px 50px;
+        height: 350px;
     }
 
     .hero-section > article > h3 {
@@ -280,5 +278,35 @@ h3 {
 
     #hero-buttons {
         display: flex;
+    }
+}
+
+@media only screen and (min-width: 950px) {
+    .hero-section {
+        height: 500px;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .hero-section {
+        height: 600px;
+    }
+}
+
+@media only screen and (min-width: 1250px) {
+    .hero-section {
+        height: 720px;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .hero-section {
+        height: 850px;
+    }
+}
+
+@media only screen and (min-width: 1700px) {
+    .hero-section {
+        height: 950px;
     }
 }
