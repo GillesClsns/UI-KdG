@@ -150,8 +150,13 @@ h3 {
     padding: 0 5vw 5vw
 }
 
-.testimonials q {
-    height: 15vw
+.testimonials > article {
+    justify-content: flex-start;
+}
+
+.testimonials > article > q {
+    height: fit-content;
+    margin-bottom: 20px;
 }
 
 .testimonials h3, p {
@@ -160,4 +165,141 @@ h3 {
 
 .about-company article, .about-myself article {
     max-width: 75%
+}
+
+@media only screen and (max-width: 900px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: #071B24;
+    }
+
+    .hero-section {
+        padding: 100px 20px;
+        background-color: #08212C;
+        height: fit-content;
+    }
+
+    .hero-section article, .hero-section > article > h3 {
+        width: auto;
+        padding: 0;
+    }
+
+    #hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .about-company, .about-myself {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        height: fit-content;
+        padding: 20px;
+    }
+
+    .about-myself {
+        flex-direction: column;
+    }
+
+    #goto-game {
+        margin-right: 0 !important;
+    }
+
+    figure > img {
+        margin: 25px;
+        max-width: 75%;
+    }
+
+    .why-us, .testimonials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .why-us > article {
+        max-width: 65%;
+    }
+
+    .why-us > h3 {
+        font-size: 18px;
+    }
+
+    .testimonials > article > q {
+        margin-bottom: 20px;
+        height: fit-content;
+    }
+
+    .testimonials > article {
+        max-width: 80%;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 900px) {
+
+    body {
+        background: #071B24;
+    }
+
+    .navigation {
+        margin: 0 50px 0 0;
+    }
+
+    .text-logo {
+        margin-left: 50px;
+
+    }
+
+    .main-nav {
+        padding: 0;
+        align-items: center;
+    }
+
+    .main-nav li {
+        margin-left: 26px;
+    }
+
+    .hero-section {
+        background-color: #08212C;
+        height: fit-content;
+        padding: 20px 50px;
+    }
+
+    .hero-section > article > h3 {
+        padding: 0;
+    }
+
+    .hero-section > article {
+        padding: 0;
+    }
+
+    .about-company article, .about-myself article {
+        max-width: 50%;
+    }
+
+    .about-myself > figure > img, .about-company > figure > img {
+        width: 100%;
+    }
+
+    .about-company, .about-myself {
+        display: flex;
+        align-items: center;
+        gap: 100px;
+        padding: 50px;
+        height: fit-content;
+        justify-content: center;
+    }
+
+    #hero-buttons {
+        display: flex;
+    }
 }
