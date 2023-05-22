@@ -11,7 +11,8 @@ body {
 
 .text-logo {
     font-weight: 500;
-    letter-spacing: 5px
+    letter-spacing: 5px;
+    margin-left: 50px;
 }
 
 .bg-color {
@@ -29,7 +30,7 @@ body {
 .navigation {
     display: flex;
     justify-content: space-between;
-    margin: 20px 50px
+    margin: 0 50px 0 0;
 }
 
 .navigation a {
@@ -43,17 +44,19 @@ body {
     text-underline-offset: 10px
 }
 
+.main-nav {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+}
+
 .main-nav ul li {
     margin-bottom: 10px
 }
 
-.main-nav {
-    display: flex;
-    list-style: none
-}
-
 .main-nav > li {
-    margin-left: 50px
+    margin-left: 26px;
 }
 
 #sub-1 ul {

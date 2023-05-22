@@ -3,7 +3,9 @@
 <head>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Our games</title>
+
     <link rel="icon" type="image/x-icon" href="/media/favicon/favicon.png">
     <link rel="stylesheet" href="/css/general/normalize.css">
     <link rel="stylesheet" href="/css/general/site.css">
@@ -104,12 +106,14 @@
             <input type="number" id="player-slots" name="player-slots" min="1" max="100" value="10" required>
             <span id="player-slots-error" class="error-message"></span><br>
 
-            <label>* Server Location:</label><br>
-            <label for="server-location-us">US:</label>
-            <input type="radio" id="server-location-us" name="server-location" value="us" required>
+            <div id="server-location"><label>* Server Location:</label><br>
+                <label for="server-location-us">US:</label>
+                <input type="radio" id="server-location-us" name="server-location" value="us" required>
 
-            <label for="server-location-eu">EU:</label>
-            <input type="radio" id="server-location-eu" name="server-location" value="eu"><br>
+                <label for="server-location-eu">EU:</label>
+                <input type="radio" id="server-location-eu" name="server-location" value="eu"><br></div>
+            <span id="server-location-error" class="error-message"></span><br>
+
 
             <label for="ram">* RAM:</label>
             <input type="range" id="ram" name="ram" min="1" max="16" step="1" value="8">

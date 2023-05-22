@@ -1,5 +1,6 @@
 body {
-    background: #071B24
+    background: #071B24;
+    margin-bottom: 50px;
 }
 
 main {
@@ -102,4 +103,12 @@ input[type=number] {
 
 #confirm-order:hover {
     background-color: #d32f2f
+}
+
+@media only screen and (max-width: 900px) {
+    .navigation {
+        display: none;
+    }
+
+
 }

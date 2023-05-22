@@ -26,7 +26,8 @@ input[type=submit] {
 
 form {
     display: grid;
-    grid-template-areas:"personal contact" "custom custom" "button button"
+    grid-template-areas:"personal contact" "custom custom" "button button";
+    margin-bottom: 50px;
 }
 
 fieldset {
@@ -80,4 +81,33 @@ select > optgroup > option {
 
 select > optgroup {
     color: #000
+}
+
+#server-location {
+    display: flex;
+}
+
+#server-location > label, #server-location > input {
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+    .navigation {
+        display: none;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    fieldset {
+        margin: 25px 0;
+    }
+
+    body {
+        background-color: #08212C;
+    }
+
+
 }

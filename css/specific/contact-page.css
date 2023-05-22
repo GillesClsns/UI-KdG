@@ -18,3 +18,27 @@ main {
 .google-maps {
     grid-area: map
 }
+
+@media only screen and (max-width: 900px) {
+    .navigation {
+        display: none;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 0;
+    }
+    iframe {
+        width: fit-content;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+    .contact-information > h2, address > p {
+        text-align: center;
+    }
+}

@@ -20,3 +20,26 @@ summary:hover {
 summary::marker {
     color: #F58800
 }
+
+@media only screen and (max-width: 900px) {
+
+    .navigation {
+        display: none;
+    }
+
+    .faq-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    details > summary, .faq-header > h2 {
+        font-size: 30px;
+    }
+
+    details > p {
+        font-size: 20px;
+    }
+
+
+
+}
