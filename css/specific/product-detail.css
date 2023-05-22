@@ -3,7 +3,7 @@ body {
 }
 
 .mmhm-broodkruimmeltje {
-    margin-left: 50px
+    margin-left: 50px;
 }
 
 .mmhm-broodkruimmeltje li a {
@@ -18,7 +18,8 @@ body {
     display: flex;
     list-style-type: "/";
     border: 1px #4E4E4E solid;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    align-items: center;
 }
 
 .mmhm-broodkruimmeltje li:first-child {
@@ -89,21 +90,22 @@ body {
 }
 
 @media only screen and (max-width: 900px) {
-    .navigation {
-        display: none;
+    body {
+        display: flex;
+        flex-direction: column;
     }
 
     .mmhm-broodkruimmeltje {
         display: flex;
         justify-content: center;
         margin: 0;
+        background-color: #08212C;
     }
 
     .product {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 50px 0;
     }
 
     .product-header, .product-description, .product-properties {

@@ -23,8 +23,9 @@ summary::marker {
 
 @media only screen and (max-width: 900px) {
 
-    .navigation {
-        display: none;
+    body {
+        display: flex;
+        flex-direction: column;
     }
 
     .faq-section {

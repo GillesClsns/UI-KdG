@@ -59,14 +59,14 @@ body {
     margin-left: 26px;
 }
 
-#sub-1 ul {
+#submenu ul {
     padding: 1.5vw 0;
     list-style: none;
     position: absolute;
     display: none
 }
 
-#sub-1:hover ul {
+#submenu:hover ul {
     display: block
 }
 
@@ -85,3 +85,76 @@ html {
 body::-webkit-scrollbar {
     display: none
 }
+
+
+#openMenu {
+    display: none;
+    font-size: 25px;
+    margin: 20px;
+    align-self: flex-end;
+}
+
+#closeMenu {
+    padding: 0;
+    font-size: 50px;
+    margin: 20px;
+    color: #F58800;
+}
+
+#mobile-nav > section {
+    display: flex;
+    justify-content: space-between;
+    background-color: #071B24;
+    align-items: center;
+}
+
+#mobile-nav > section > h3 {
+    padding-left: 20px;
+}
+
+.mobile-nav-overlay {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    background-color: #FAF0E6;
+    transition: height 0.5s;
+    overflow: hidden;
+}
+
+.overlay-content > li {
+    padding-bottom: 10px;
+
+}
+
+.overlay-content {
+    text-align: left;
+    list-style: none;
+}
+
+#mobile-nav a,
+.submenu ul li {
+    font-size: 25px;
+    text-decoration: none;
+    color: #08212C;
+    list-style-type: square;
+}
+
+li::marker {
+    color: #F58800;
+}
+
+#mobile-nav {
+    z-index: 99;
+}
+
+@media screen and (max-width: 750px) {
+    #openMenu {
+        display: initial;
+    }
+
+    nav:not(#mobile-nav) {
+        display: none;
+    }
+}
+
+

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/css/specific/confirmation.css">
 
     <script src="../js/extensions/cart/renderConfirmation.js" defer></script>
+    <script src="../js/extensions/navigation/load-hamburger.js"></script>
 
 </head>
 
@@ -24,7 +25,7 @@
         <h2 class="text-logo">ZORION HOSTING</h2>
         <ul class="main-nav">
             <li><a href="../index.html">Home</a></li>
-            <li id="sub-1">
+            <li id="submenu">
                 <a href="./product-page.html">Products</a>
                 <ul>
                     <li><a href="./product-page.html#minecraft-section">Minecraft</a></li>
@@ -42,6 +43,33 @@
         </ul>
     </nav>
 </header>
+
+<nav id="mobile-nav" class="mobile-nav-overlay">
+    <h2 class="hidden">Mobile navigation</h2>
+    <section>
+        <h3>Zorion Hosting</h3>
+        <p id="closeMenu">⨯</p>
+    </section>
+    <ul class="overlay-content">
+        <li><a href="../index.html">Home</a></li>
+        <li class="submenu">
+            <a href="./product-page.html">Products</a>
+            <ul>
+                <li><a href="./product-page.html#minecraft-section">Minecraft</a></li>
+                <li><a href="./product-page.html#rust-section">Rust</a></li>
+                <li><a href="./product-page.html#ark-section">ARK Survival</a></li>
+                <li><a href="./product-page.html#valheim-section">Valheim</a></li>
+                <li><a href="./product-page.html#farming-section">Farming Simulator</a></li>
+                <li><a href="./product-page.html#hytale-section">Hytale</a></li>
+            </ul>
+        </li>
+        <li><a href="./faq-page.html">FAQ</a></li>
+        <li><a href="./personalization.html">Customizer</a></li>
+        <li><a href="./shopping-cart.html" class="active">Cart</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+<p id="openMenu">☰</p>
 
 <main id="main" class="bg-color">
 

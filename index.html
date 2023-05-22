@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/general/site.css">
     <link rel="stylesheet" href="css/specific/index.css">
 
+    <script src="js/extensions/navigation/load-hamburger.js" defer></script>
+
 </head>
 <body>
 <h1 class="hidden">Examenproject Gilles Claessens INF107A</h1>
@@ -21,7 +23,7 @@
         <h2 class="text-logo">ZORION HOSTING</h2>
         <ul class="main-nav">
             <li><a href="./index.html" class="active">Home</a></li>
-            <li id="sub-1">
+            <li id="submenu">
                 <a href="./html/product-page.html">Products</a>
                 <ul>
                     <li><a href="./html/product-page.html#minecraft-section">Minecraft</a></li>
@@ -39,6 +41,33 @@
         </ul>
     </nav>
 </header>
+
+<nav id="mobile-nav" class="mobile-nav-overlay">
+    <h2 class="hidden">Mobile navigation</h2>
+    <section>
+        <h3>Zorion Hosting</h3>
+        <p id="closeMenu">⨯</p>
+    </section>
+    <ul class="overlay-content">
+        <li><a href="./index.html">Home</a></li>
+        <li class="submenu">
+            <a href="./html/product-page.html">Products</a>
+            <ul>
+                <li><a href="./html/product-page.html#minecraft-section">Minecraft</a></li>
+                <li><a href="./html/product-page.html#rust-section">Rust</a></li>
+                <li><a href="./html/product-page.html#ark-section">ARK Survival</a></li>
+                <li><a href="./html/product-page.html#valheim-section">Valheim</a></li>
+                <li><a href="./html/product-page.html#farming-section">Farming Simulator</a></li>
+                <li><a href="./html/product-page.html#hytale-section">Hytale</a></li>
+            </ul>
+        </li>
+        <li><a href="./html/faq-page.html">FAQ</a></li>
+        <li><a href="./html/personalization.html">Customizer</a></li>
+        <li><a href="./html/shopping-cart.html">Cart</a></li>
+        <li><a href="./html/contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+<p id="openMenu">☰</p>
 
 <main>
     <!-- HERO SECTION -->
